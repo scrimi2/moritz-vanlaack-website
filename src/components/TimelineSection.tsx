@@ -26,7 +26,7 @@ const timelineItems = [
   {
     year: '2021',
     title: 'van Laack & partners',
-    logo: '/images/vlp-logo.png',
+    logo: '/images/vlp-logo.jpg',
     role: 'Founder & CEO',
     description: 'Founded a procurement transformation and strategy consulting firm. Built a team of 20 consultants delivering cost-cutting programs and strategic sourcing for leading enterprises — work that ultimately led to the creation of Sourcera AI.',
   },
@@ -54,21 +54,21 @@ const timelineItems = [
   {
     year: '2017',
     title: 'MHP – A Porsche Company',
-    logo: '/images/logos/mhp.png',
+    logo: '/images/logos/mhp.svg',
     role: 'Consultant → Senior Consultant',
     description: 'IT project lead for international SAP MM rollouts, Ariba and Fieldglass implementations.',
   },
   {
     year: '2017',
     title: 'REWE Group',
-    logo: '/images/logos/rewe.png',
+    logo: '/images/logos/rewe.svg',
     role: 'Category Manager',
     description: 'Managed EUR 350M in beverage procurement spend across 210 suppliers.',
   },
   {
     year: '2014',
     title: 'Hanyang University Seoul',
-    logo: '/images/logos/hanyang.png',
+    logo: '/images/logos/hanyang.webp',
     role: 'Exchange Semester – Business & Marketing',
     description: 'Semester abroad focusing on international business strategy, marketing management, and cross-cultural trade in one of Asia\'s leading business programs.',
   },

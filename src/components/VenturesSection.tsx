@@ -20,7 +20,7 @@ const ventures = [
   {
     year: 'Founded 2021',
     title: 'van Laack & partners',
-    logo: '/images/vlp-logo.png',
+    logo: '/images/vlp-logo.jpg',
     subtitle: 'CEO & Managing Director',
     description:
       "Procurement transformation and strategy consulting firm specializing in cost-cutting programs, strategic sourcing, and end-to-end supply chain optimization. A team of 20 specialized consultants across Europe serving the world's leading companies — and the hands-on experience that led to founding Sourcera AI.",
