@@ -8,43 +8,28 @@ const clientLogos = [
   'Knauf', 'Stadler', 'HHLA', 'Progroup', 'Bizerba',
 ];
 
-const partnerLogos = [
-  'Accenture', 'McKinsey', 'Deloitte', 'PwC', 'Kearney',
-  'MHP', 'Horvath', 'SAP', 'Coupa', 'Ivalua',
-  'Sievo', 'Ariba', 'Jaggaer',
-];
-
-function LogoRow({
-  logos,
-  label,
-  duration = 30,
-  direction = 'left',
-}: {
-  logos: string[];
-  label: string;
-  duration?: number;
-  direction?: 'left' | 'right';
-}) {
-  const doubled = [...logos, ...logos];
+export default function LogoCarousel() {
+  const doubled = [...clientLogos, ...clientLogos];
 
   return (
-    <div className="mb-10">
-      <p className="mb-4 text-center text-xs font-semibold uppercase tracking-widest text-neutral-400">
-        {label}
-      </p>
+    <section className="py-20 bg-white overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 mb-10">
+        <h3 className="text-base font-black uppercase tracking-[0.1em] text-neutral-900">
+          Proof of Brands
+        </h3>
+      </div>
+
+      {/* Scrolling logos */}
       <div className="relative overflow-hidden">
-        {/* Fade edges */}
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-white to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-white to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-white to-transparent" />
 
         <motion.div
-          className="flex w-max gap-4"
-          animate={{
-            x: direction === 'left' ? ['0%', '-50%'] : ['-50%', '0%'],
-          }}
+          className="flex w-max gap-12"
+          animate={{ x: ['0%', '-50%'] }}
           transition={{
             x: {
-              duration,
+              duration: 40,
               repeat: Infinity,
               ease: 'linear',
             },
@@ -53,23 +38,14 @@ function LogoRow({
           {doubled.map((logo, i) => (
             <div
               key={`${logo}-${i}`}
-              className="shrink-0 rounded-lg bg-neutral-100 px-6 py-3 font-semibold text-neutral-500 transition-colors hover:text-neutral-900"
+              className="shrink-0 flex items-center justify-center h-14"
             >
-              {logo}
+              <span className="text-lg font-bold text-neutral-300 whitespace-nowrap uppercase tracking-wide">
+                {logo}
+              </span>
             </div>
           ))}
         </motion.div>
-      </div>
-    </div>
-  );
-}
-
-export default function LogoCarousel() {
-  return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
-      <div className="mx-auto max-w-7xl">
-        <LogoRow logos={clientLogos} label="Trusted by" duration={35} direction="left" />
-        <LogoRow logos={partnerLogos} label="Partner Network" duration={30} direction="right" />
       </div>
     </section>
   );

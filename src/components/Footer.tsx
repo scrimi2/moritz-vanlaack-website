@@ -1,13 +1,3 @@
-import { Heart } from 'lucide-react';
-
-const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Ventures', href: '#ventures' },
-  { label: 'Track Record', href: '#track-record' },
-  { label: 'Expertise', href: '#expertise' },
-  { label: 'Contact', href: '#contact' },
-];
-
 function LinkedInIcon({ size = 18 }: { size?: number }) {
   return (
     <svg
@@ -36,93 +26,57 @@ function InstagramIcon({ size = 18 }: { size?: number }) {
   );
 }
 
-const socialLinks = [
-  {
-    label: 'LinkedIn',
-    href: 'https://linkedin.com/in/moritzvanlaack',
-    icon: LinkedInIcon,
-  },
-  {
-    label: 'Instagram',
-    href: 'https://instagram.com/moritzvanlaack',
-    icon: InstagramIcon,
-  },
-];
-
 export default function Footer() {
   return (
-    <footer className="bg-neutral-900 text-white">
-      {/* Top section */}
-      <div className="mx-auto max-w-7xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
-        <div className="mb-10">
-          <h3 className="text-2xl font-bold tracking-tight">
-            Moritz van Laack
-          </h3>
-          <p className="mt-2 max-w-md text-neutral-400">
-            Procurement expert, entrepreneur, and digital strategist. Building
-            the future of procurement through AI and strategic consulting.
-          </p>
-        </div>
-
-        <div className="h-px w-full bg-neutral-700" />
-
-        {/* Middle section */}
-        <div className="flex flex-col items-start justify-between gap-8 py-10 md:flex-row md:items-center">
-          {/* Navigation links */}
-          <nav className="flex flex-wrap gap-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm text-neutral-400 transition-colors hover:text-white"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
+    <footer className="bg-white border-t border-neutral-200">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12">
+        {/* Main footer row */}
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          {/* Logo */}
+          <div>
+            <h3 className="text-lg font-bold tracking-tight text-neutral-900">
+              Moritz van Laack
+            </h3>
+          </div>
 
           {/* Social links */}
           <div className="flex items-center gap-4">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.label}
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-800 text-neutral-400 transition-colors hover:bg-primary hover:text-white"
-              >
-                <social.icon size={18} />
-              </a>
-            ))}
+            <a
+              href="https://linkedin.com/in/moritzvanlaack"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="text-neutral-400 transition-colors hover:text-neutral-900"
+            >
+              <LinkedInIcon size={20} />
+            </a>
+            <a
+              href="https://instagram.com/moritzvanlaack"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="text-neutral-400 transition-colors hover:text-neutral-900"
+            >
+              <InstagramIcon size={20} />
+            </a>
           </div>
         </div>
 
-        <div className="h-px w-full bg-neutral-700" />
+        {/* Divider */}
+        <div className="h-px w-full bg-neutral-200 my-8" />
 
-        {/* Bottom section */}
-        <div className="flex flex-col items-center justify-between gap-4 pt-8 text-sm text-neutral-500 md:flex-row">
+        {/* Bottom row */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-400">
           <p>&copy; 2026 Moritz van Laack. All rights reserved.</p>
 
           <div className="flex items-center gap-6">
-            <a
-              href="/impressum"
-              className="transition-colors hover:text-white"
-            >
+            <a href="/impressum" className="transition-colors hover:text-neutral-900">
               Impressum
             </a>
-            <a
-              href="/datenschutz"
-              className="transition-colors hover:text-white"
-            >
+            <a href="/datenschutz" className="transition-colors hover:text-neutral-900">
               Datenschutz
             </a>
           </div>
-
-          <p className="flex items-center gap-1">
-            Made in Cologne with{' '}
-            <Heart size={14} className="fill-red-500 text-red-500" />
-          </p>
         </div>
       </div>
     </footer>

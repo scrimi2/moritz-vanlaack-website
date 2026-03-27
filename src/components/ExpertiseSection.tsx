@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ShoppingCart, Target, Truck, Rocket, Users, Bot } from 'lucide-react';
+import { DecorativeFlowLinesReverse } from './DecorativeLines';
 
 const expertiseCards = [
   {
@@ -50,61 +51,42 @@ const certifications = [
   'Wescale/WPS4',
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: 'easeOut' as const },
-  },
-};
-
 export default function ExpertiseSection() {
   return (
-    <section id="expertise" className="py-24 px-4 sm:px-6 lg:px-8 bg-[var(--color-neutral-50)]">
-      <div className="mx-auto max-w-7xl">
+    <section id="expertise" className="relative py-32 px-6 lg:px-10 bg-neutral-50 overflow-hidden">
+      <DecorativeFlowLinesReverse />
+      <div className="relative z-10 mx-auto max-w-[1400px]">
+        {/* Giant heading */}
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl"
+          transition={{ duration: 0.7 }}
+          className="text-[clamp(2.5rem,7vw,6.5rem)] font-black leading-[0.95] tracking-tight text-neutral-900 uppercase mb-20"
         >
-          Expertise & Platforms
+          Expertise &amp;<br />Platforms.
         </motion.h2>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-50px' }}
-          className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
-        >
-          {expertiseCards.map((card) => (
+        <div className="grid grid-cols-1 gap-px md:grid-cols-2 lg:grid-cols-3 bg-neutral-200 rounded-2xl overflow-hidden">
+          {expertiseCards.map((card, index) => (
             <motion.div
               key={card.title}
-              variants={cardVariants}
-              className="group rounded-2xl bg-white p-6 shadow-[var(--shadow-md)] transition-shadow hover:shadow-[var(--shadow-lg)]"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
+              className="bg-white p-10 group"
             >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-primary)]/10">
-                <card.icon className="h-6 w-6 text-[var(--color-primary)]" />
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                <card.icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold text-neutral-900">{card.title}</h3>
-              <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{card.description}</p>
-              <div className="mt-4 flex flex-wrap gap-2">
+              <h3 className="text-xl font-bold text-neutral-900 uppercase">{card.title}</h3>
+              <p className="mt-3 text-base text-neutral-500 leading-relaxed">{card.description}</p>
+              <div className="mt-5 flex flex-wrap gap-2">
                 {card.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full bg-[var(--color-primary)]/5 px-3 py-1 text-xs font-medium text-[var(--color-primary)]"
+                    className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-600"
                   >
                     {tag}
                   </span>
@@ -112,7 +94,7 @@ export default function ExpertiseSection() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Certifications */}
         <motion.div
@@ -120,16 +102,16 @@ export default function ExpertiseSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-16 text-center"
+          className="mt-16"
         >
-          <h3 className="text-sm font-semibold uppercase tracking-widest text-neutral-500">
+          <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400 mb-5">
             Certifications
           </h3>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             {certifications.map((cert) => (
               <span
                 key={cert}
-                className="rounded-lg border border-[var(--color-primary)]/20 bg-white px-4 py-2 text-sm font-medium text-neutral-700 shadow-[var(--shadow-sm)]"
+                className="rounded-full border border-neutral-200 bg-white px-5 py-2.5 text-sm font-medium text-neutral-600"
               >
                 {cert}
               </span>

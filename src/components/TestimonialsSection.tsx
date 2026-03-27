@@ -1,90 +1,108 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Quote } from 'lucide-react';
+import { useState } from 'react';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
+import { DecorativeFlowLinesReverse } from './DecorativeLines';
 
 const testimonials = [
   {
     quote:
-      'Sourcera.ai is showing us how procurement efficiency can scale. What once took months of manual work is now generated in days. This is a potential game changer for large and complex organizations like ours.',
+      'SOURCERA.AI IS SHOWING US HOW PROCUREMENT EFFICIENCY CAN SCALE. WHAT ONCE TOOK MONTHS OF MANUAL WORK IS NOW GENERATED IN DAYS. THIS IS A POTENTIAL GAME CHANGER FOR LARGE AND COMPLEX ORGANIZATIONS LIKE OURS.',
     name: 'Dirk Thiemann',
     title: 'CPO, Phoenix Group',
   },
   {
     quote:
-      'Sourcera.ai helps us turn data into sourcing actions within days. We can rapidly reclassify spend, detect overlaps and launch initiatives that deliver measurable savings while freeing our teams to focus on strategic decisions instead of repetitive tasks.',
+      'SOURCERA.AI HELPS US TURN DATA INTO SOURCING ACTIONS WITHIN DAYS. WE CAN RAPIDLY RECLASSIFY SPEND, DETECT OVERLAPS AND LAUNCH INITIATIVES THAT DELIVER MEASURABLE SAVINGS.',
     name: 'Alejandro Basterrechea',
     title: 'CPO, Zalando',
   },
+  {
+    quote:
+      '[PLACEHOLDER] MORITZ AND HIS TEAM DELIVERED EXCEPTIONAL RESULTS IN OUR PROCUREMENT TRANSFORMATION PROJECT. THEIR COMBINATION OF STRATEGIC THINKING AND HANDS-ON EXECUTION IS RARE.',
+    name: '[Client Name]',
+    title: '[Title, Company]',
+  },
+  {
+    quote:
+      '[PLACEHOLDER] THE ZERO-UP APPROACH GAVE US CONFIDENCE FROM DAY ONE. WE SAW MEASURABLE SAVINGS WITHIN WEEKS, NOT MONTHS.',
+    name: '[Client Name]',
+    title: '[Title, Company]',
+  },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: 'easeOut' as const },
-  },
-};
-
 export default function TestimonialsSection() {
+  const [activeTab, setActiveTab] = useState(0);
+
   return (
-    <section id="testimonials" className="py-24 px-4 sm:px-6 lg:px-8 bg-[var(--color-neutral-50)]">
-      <div className="mx-auto max-w-5xl">
+    <section id="testimonials" className="relative py-32 px-6 lg:px-10 bg-white overflow-hidden">
+      <DecorativeFlowLinesReverse />
+      <div className="relative z-10 mx-auto max-w-[1400px]">
+        {/* Giant heading */}
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl"
+          transition={{ duration: 0.7 }}
+          className="text-[clamp(2.5rem,7vw,6.5rem)] font-black leading-[0.95] tracking-tight text-neutral-900 uppercase mb-20"
         >
-          What Leaders Say
+          Real Experiences.<br />Real Results.
         </motion.h2>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-50px' }}
-          className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2"
-        >
-          {testimonials.map((t) => (
-            <motion.div
-              key={t.name}
-              variants={cardVariants}
-              className="rounded-2xl bg-white p-8 shadow-[var(--shadow-lg)]"
-            >
-              <Quote className="mb-4 h-8 w-8 text-[var(--color-primary)]/30" />
+        {/* Testimonial card */}
+        <div className="rounded-2xl border border-neutral-200 border-l-4 border-l-primary p-8 md:p-14">
+          <div className="flex flex-col md:flex-row gap-10 items-start">
+            {/* Avatar */}
+            <div className="shrink-0 w-40 h-48 rounded-xl overflow-hidden relative shadow-md">
+              <Image
+                src="/images/portrait-black.jpg"
+                alt="Moritz van Laack"
+                fill
+                className="object-cover object-top"
+                sizes="160px"
+              />
+            </div>
 
-              <blockquote className="text-base italic leading-relaxed text-neutral-700">
-                &ldquo;{t.quote}&rdquo;
-              </blockquote>
+            {/* Quote */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.4 }}
+                className="flex-1"
+              >
+                <blockquote className="text-[clamp(1rem,2.5vw,1.75rem)] font-bold leading-[1.2] text-neutral-900 uppercase mb-8">
+                  &bdquo;{testimonials[activeTab].quote}&ldquo;
+                </blockquote>
 
-              <div className="mt-6 flex items-center gap-4">
-                {/* Placeholder avatar */}
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary)]/10 text-sm font-bold text-[var(--color-primary)]">
-                  {t.name
-                    .split(' ')
-                    .map((n) => n[0])
-                    .join('')}
-                </div>
                 <div>
-                  <p className="font-semibold text-neutral-900">{t.name}</p>
-                  <p className="text-sm text-neutral-500">{t.title}</p>
+                  <p className="font-bold text-neutral-900 text-lg">
+                    {testimonials[activeTab].name}
+                  </p>
+                  <p className="text-base text-neutral-500">
+                    {testimonials[activeTab].title}
+                  </p>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
+
+        {/* Tab navigation */}
+        <div className="flex gap-4 mt-8">
+          {testimonials.map((t, i) => (
+            <button
+              key={i}
+              onClick={() => setActiveTab(i)}
+              className={`h-[3px] rounded-full transition-all duration-300 ${
+                i === activeTab ? 'w-10 bg-neutral-900' : 'w-5 bg-neutral-300 hover:bg-neutral-400'
+              }`}
+            />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

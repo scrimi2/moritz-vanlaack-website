@@ -1,0 +1,276 @@
+{
+  "nav": {
+    "about": "Über mich",
+    "ventures": "Unternehmen",
+    "trackRecord": "Werdegang",
+    "expertise": "Expertise",
+    "contact": "Kontakt",
+    "letsConnect": "Kontakt aufnehmen",
+    "closeMenu": "Menü schließen",
+    "openMenu": "Menü öffnen"
+  },
+  "hero": {
+    "tagline": "Einkaufsexperte. Unternehmer. Digitalstratege.",
+    "headline1": "Beschaffung neu denken mit KI",
+    "headline2": "EUR 70 Mrd.+ an optimiertem Einkaufsvolumen",
+    "headline3": "Vom Category Management zur KI-gestützten Beschaffung",
+    "subtitle": "Ich entwickle Beschaffungsstrategien, Teams und Technologien, die messbare Ergebnisse liefern.",
+    "cta": "Gespräch vereinbaren"
+  },
+  "about": {
+    "title": "Über mich",
+    "photoAlt": "Moritz van Laack",
+    "paragraph1": "Als Einkaufsexperte und Unternehmer mit Sitz in Köln transformiere ich seit über 12 Jahren die Art und Weise, wie Unternehmen einkaufen. Von der Steuerung eines Einkaufsvolumens von EUR 350 Mio. im Getränkebereich bei der REWE Group über die Leitung digitaler Transformationsprojekte im Millionenbereich bei MHP (A Porsche Company) und Accenture Strategy habe ich umfassende Expertise über die gesamte Source-to-Pay-Landschaft aufgebaut.",
+    "paragraph2": "2021 habe ich van Laack & partners gegründet, um erstklassige Einkaufsberatung für ambitionierte Organisationen anzubieten. 2025 habe ich Sourcera AI mitgegründet, um das zu automatisieren, was ich ein Jahrzehnt lang manuell gemacht habe — weil die besten Einkaufsstrategien bessere Werkzeuge verdienen.",
+    "paragraph3": "Ich habe einen MBA der HHL Leipzig Graduate School of Management und einen BA in Handelsmanagement. Ich spreche Deutsch und Englisch und habe an der Hanyang University Seoul und der Ballard High School Seattle studiert.",
+    "stat1Value": "70 Mrd.+",
+    "stat1Label": "EUR optimiertes Volumen",
+    "stat2Value": "12+",
+    "stat2Label": "Jahre Erfahrung",
+    "stat3Value": "25+",
+    "stat3Label": "Erfolgreiche Projekte",
+    "stat4Value": "20",
+    "stat4Label": "Einkaufsberater"
+  },
+  "ventures": {
+    "title": "Meine Unternehmen",
+    "subtitle": "Die Zukunft des Einkaufs durch Beratung und KI-Technologie gestalten",
+    "sourcera": {
+      "year": "Gegründet 2025",
+      "title": "Sourcera AI",
+      "role": "CEO & Mitgründer",
+      "description": "Die erste End-to-End Opportunity-to-Savings (O2S) Plattform. Sourcera verbindet ERPs, Spend Cubes und S2C-Plattformen zu einer zentralen Datenquelle und nutzt KI, um fragmentierte Einkaufsdaten in optimierte Ausschreibungen und messbare Einsparungen zu verwandeln.",
+      "stat1": "10-20% zusätzliche Einsparungen",
+      "stat2": "90% weniger Handarbeit",
+      "stat3": "10x schnellere Umsetzung",
+      "customers": "Vertraut von Phoenix Group, Zalando, Tesa",
+      "link": "Zu sourcera.ai"
+    },
+    "vanLaack": {
+      "year": "Gegründet 2021",
+      "title": "van Laack & partners",
+      "role": "CEO & Geschäftsführer",
+      "description": "360-Grad Supply Chain Management und Einkaufsberatung. Ein Team von 20 spezialisierten Beratern in ganz Europa, das erstklassige Einkaufstransformation für weltweit führende Unternehmen liefert.",
+      "stat1": "25+ Projekte",
+      "stat2": "22 Partner",
+      "stat3": "20 Berater",
+      "customers": "Für Schaeffler, Mercedes-Benz, BASF, Siemens Energy, VW",
+      "link": "Zu vanlaack-partners.com"
+    }
+  },
+  "timeline": {
+    "title": "Werdegang",
+    "subtitle": "Vom operativen Category Management über C-Level-Strategieberatung zum Unternehmertum",
+    "educationTitle": "Ausbildung",
+    "items": {
+      "item1": {
+        "year": "2025",
+        "role": "Gründer & Geschäftsführer",
+        "company": "Sourcera AI",
+        "description": "KI-Beschaffungsplattform mitgegründet mit Andreas Eiselt. Aufbau der ersten End-to-End O2S-Lösung."
+      },
+      "item2": {
+        "year": "2021–Heute",
+        "role": "Gründer & CEO",
+        "company": "van Laack & partners",
+        "description": "Team von 20 Einkaufsberatern aufgebaut. Leitung von Projekten wie Interim Head of Global Category Management für einen Pharma-Großhändler mit EUR 500 Mio.+ Einkaufsvolumen."
+      },
+      "item3": {
+        "year": "2020–2021",
+        "role": "Manager, Supply Chain & Operations",
+        "company": "Accenture Strategy",
+        "description": "Leitung von Zero-Based Strategy Evaluierungen, digitalen Transformations-Roadmaps und Best-of-Breed Tool-Implementierungen für Fortune 500 Kunden. Projektvolumen über EUR 10 Mio."
+      },
+      "item4": {
+        "year": "2019–2020",
+        "role": "Senior Consultant, Digital SCM",
+        "company": "MHP – A Porsche Company",
+        "description": "IT-Projektleitung für internationale SAP MM Rollouts, SAP Ariba und Fieldglass Implementierungen sowie RPA & KI Beschaffungsautomatisierung."
+      },
+      "item5": {
+        "year": "2017–2018",
+        "role": "Consultant, Digital SCM",
+        "company": "MHP – A Porsche Company",
+        "description": "Einstieg in die Einkaufs-Technologieberatung. Erste Plattform-Implementierungen."
+      },
+      "item6": {
+        "year": "2017",
+        "role": "Category Manager",
+        "company": "REWE Group",
+        "description": "Steuerung von EUR 350 Mio. Einkaufsvolumen im Getränkebereich über 210 Lieferanten."
+      },
+      "item7": {
+        "year": "2013–2016",
+        "role": "Dualer Student",
+        "company": "REWE Group / EUFH Köln",
+        "description": "BA in Handelsmanagement. Ausgezeichnet mit der IHK ‚Besten Ehrung' für herausragende Leistungen."
+      }
+    },
+    "education": {
+      "edu1": { "degree": "MBA", "school": "HHL Leipzig", "years": "2019–2021" },
+      "edu2": { "degree": "Austausch", "school": "Hanyang Seoul", "years": "2016" },
+      "edu3": { "degree": "BA", "school": "EUFH Köln", "years": "2013–2016" },
+      "edu4": { "degree": "Austausch", "school": "Ballard HS Seattle", "years": "2010–2011" }
+    }
+  },
+  "expertise": {
+    "title": "Expertise & Plattformen",
+    "cards": {
+      "card1": {
+        "title": "Digitaler Einkauf (S2C & P2P)",
+        "description": "End-to-End Source-to-Contract und Procure-to-Pay Implementierung",
+        "tags": "Ariba, Coupa, Ivalua, Jaggaer, Fieldglass"
+      },
+      "card2": {
+        "title": "Einkaufsstrategie",
+        "description": "Individuelle Einkaufsstrategien, Kostenreduktion und Zero-Based-Ansätze",
+        "tags": "Sievo, PerAngusta, Bonsai"
+      },
+      "card3": {
+        "title": "Supply Chain Optimierung",
+        "description": "Prozessoptimierung, Operational Excellence und nachhaltige Beschaffung",
+        "tags": "SAP S/4, R/3, MM, SRM"
+      },
+      "card4": {
+        "title": "Digitale Transformation",
+        "description": "Roadmap-Design, Tool-Auswahl, Change Management und S4/HANA-Migrationen",
+        "tags": "SAP S4/HANA, ERP Integration"
+      },
+      "card5": {
+        "title": "Projekt- & Programm-Management",
+        "description": "Durchführung von Projekten im Millionenbereich und globale Rollouts über Branchen hinweg",
+        "tags": "Wrike, Jira, Confluence"
+      },
+      "card6": {
+        "title": "KI & Automatisierung",
+        "description": "RPA, KI-gestützte Beschaffungsautomatisierung und Process Mining",
+        "tags": "Python, Sourcera AI"
+      }
+    },
+    "certificationsTitle": "Zertifizierungen",
+    "certifications": "Coupa, Ariba, Fieldglass (CWF/SOW), Ivalua, Wescale/WPS4"
+  },
+  "zeroUp": {
+    "title": "Der Zero-Up Ansatz",
+    "subtitle": "Unsere bewährte Methodik, die ab Tag eins Einsparungen liefert — vollständig von uns finanziert. Wir verdienen nur, wenn Sie sparen.",
+    "phase1": {
+      "title": "Discovery Phase",
+      "duration": "22 Tage",
+      "description": "Datengetriebene Identifikation von Einsparpotenzialen. Wir analysieren Ihre Prozesse, Organisationsstruktur und Governance, um 5+ Einsparmöglichkeiten zu identifizieren und zu validieren."
+    },
+    "phase2": {
+      "title": "Execution Phase",
+      "duration": "3 Monate",
+      "description": "Ausschreibungen über Coupa mit Sourcera AI. Realisierung messbarer Einsparungen zur Finanzierung der Transformation bei gleichzeitiger Identifikation weiterer Potenziale."
+    },
+    "phase3": {
+      "title": "Excellence Phase",
+      "duration": "9 Monate",
+      "description": "Definition der Tool-Landschaft und digitalen Roadmap. Optimierung der Datenqualität, Umsetzung von Prozess- und Organisationsverbesserungen für nachhaltige Performance."
+    },
+    "poweredBy": "Powered by van Laack & partners + Sourcera AI"
+  },
+  "projects": {
+    "title": "Ausgewählte Projekte",
+    "items": {
+      "project1": {
+        "title": "Globales Category Management",
+        "industry": "Pharma-Großhändler",
+        "metric": "Volumen > EUR 500 Mio.",
+        "description": "Leitung eines internationalen Teams von Category Managern und Shared Service Center. Entwicklung globaler Einkaufs- und Kostenreduktionsstrategien."
+      },
+      "project2": {
+        "title": "Internationaler Ivalua Roll-Out",
+        "industry": "Automobilzulieferer",
+        "metric": "Projekt > EUR 1,4 Mio.",
+        "description": "Koordination aller Arbeitspakete und Leitung des End-to-End Prozessdesigns für eine globale Ivalua-Implementierung."
+      },
+      "project3": {
+        "title": "S4/HANA Implementierung",
+        "industry": "Globaler Batteriehersteller",
+        "metric": "Projekt > EUR 3 Mio.",
+        "description": "S2P-Prozessanalyse, Implementierungs-Roadmap-Design, Anforderungsworkshops mit internationalen Stakeholdern."
+      },
+      "project4": {
+        "title": "Globaler Coupa Roll-Out",
+        "industry": "Papier & Verpackung",
+        "metric": "Projekt > EUR 1 Mio.",
+        "description": "Vollständige S2C & P2P Implementierung inklusive Integration mit mehreren Legacy-Systemen."
+      },
+      "project5": {
+        "title": "ZBx Digitale Transformation",
+        "industry": "Chemieunternehmen",
+        "metric": "Projekt > EUR 10 Mio.",
+        "description": "Zero-Based Strategy Evaluierung und Design einer digitalen Transformations-Roadmap für den Einkauf bei Accenture Strategy."
+      },
+      "project6": {
+        "title": "Best-of-Breed Einkaufstools",
+        "industry": "Handelskonzern",
+        "metric": "Projekt > EUR 8 Mio.",
+        "description": "Implementierung von Sievo, Bonsai und PerAngusta für einen internationalen Baustoffhändler."
+      }
+    }
+  },
+  "logos": {
+    "trustedBy": "Vertraut von",
+    "partnerNetwork": "Partnernetzwerk"
+  },
+  "testimonials": {
+    "title": "Was Entscheider sagen",
+    "items": {
+      "testimonial1": {
+        "quote": "Sourcera.ai zeigt uns, wie Einkaufseffizienz skalieren kann. Was früher Monate manueller Arbeit erforderte, wird jetzt in Tagen generiert. Das ist ein potenzieller Game Changer für große und komplexe Organisationen wie unsere.",
+        "name": "Dirk Thiemann",
+        "role": "CPO, Phoenix Group"
+      },
+      "testimonial2": {
+        "quote": "Sourcera.ai hilft uns, Daten innerhalb von Tagen in Sourcing-Maßnahmen umzuwandeln. Wir können Ausgaben schnell reklassifizieren, Überschneidungen erkennen und Initiativen starten, die messbare Einsparungen liefern, während unsere Teams sich auf strategische Entscheidungen statt repetitiver Aufgaben konzentrieren können.",
+        "name": "Alejandro Basterrechea",
+        "role": "CPO, Zalando"
+      }
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "items": {
+      "q1": {
+        "question": "Was ist der Zero-Up Ansatz?",
+        "answer": "Unsere bewährte 3-Phasen-Methodik, die ab Tag eins Einsparungen liefert. Wir starten mit einer vollständig finanzierten Discovery Phase (22 Tage) zur Identifikation von Potenzialen, gehen in die Execution (3 Monate) zur Realisierung von Einsparungen mit Sourcera AI und schließen mit einer Excellence Phase (9 Monate) zur Verankerung einer nachhaltigen Einkaufsorganisation ab. Wir verdienen nur, wenn Sie sparen."
+      },
+      "q2": {
+        "question": "Was ist Sourcera AI?",
+        "answer": "Sourcera AI ist die erste End-to-End Opportunity-to-Savings (O2S) Plattform. Sie schließt die Lücke zwischen Spend Cubes und Source-to-Contract Tools und nutzt KI, um fragmentierte Einkaufsdaten in optimierte Ausschreibungen und messbare Einsparungen zu verwandeln. Sie liefert 10-20% zusätzliche Einsparungen, 90% weniger Handarbeit und 10x schnellere Umsetzung."
+      },
+      "q3": {
+        "question": "Welche Beratungsleistungen bietet van Laack & partners?",
+        "answer": "Wir bieten 360-Grad Supply Chain Management und Einkaufsberatung mit einem Team von 20 spezialisierten Beratern in ganz Europa. Unsere Leistungen umfassen Einkaufsstrategie, digitale Transformations-Roadmaps, Tool-Implementierungen (SAP, Coupa, Ivalua, Ariba), Interim Management und Change Management."
+      },
+      "q4": {
+        "question": "Welche Branchen bedienen Sie?",
+        "answer": "Wir arbeiten branchenübergreifend in Pharma, Handel, Logistik, Fertigung, Automobil, Chemie, Energie und Verpackung. Zu unseren Kunden zählen Phoenix Group, BASF, Schaeffler, Mercedes-Benz, Volkswagen, Siemens Energy, Zalando und viele mehr."
+      },
+      "q5": {
+        "question": "In welchen Plattformen sind Sie zertifiziert?",
+        "answer": "Coupa (Full Suite), SAP Ariba (Full Suite), SAP Fieldglass (CWF/SOW), Ivalua und Wescale/WPS4. Darüber hinaus verfügen wir über tiefgehende Expertise in SAP S/4 HANA, Sievo, SpendHQ, Beneering und 10+ weiteren Einkaufsplattformen."
+      },
+      "q6": {
+        "question": "Wie können wir zusammenarbeiten?",
+        "answer": "Es gibt mehrere Wege: über ein Zero-Up Engagement (risikofreie, vollfinanzierte Discovery Phase), klassische Beratung und Interim Management über van Laack & partners oder durch die Implementierung von Sourcera AI als SaaS-Plattform. Kontaktieren Sie mich, um den passenden Ansatz zu besprechen."
+      }
+    }
+  },
+  "contact": {
+    "title": "Lassen Sie uns die Zukunft des Einkaufs gemeinsam gestalten",
+    "subtitle": "Ob Sie Ihren Einkauf optimieren, neue Tools implementieren oder erkunden möchten, wie KI Ihr Sourcing transformieren kann — ich freue mich auf den Austausch.",
+    "scheduleCall": "Gespräch vereinbaren",
+    "sendEmail": "E-Mail senden"
+  },
+  "footer": {
+    "name": "Moritz van Laack",
+    "tagline": "Einkaufsexperte, Unternehmer und Digitalstratege. Aufbau der Zukunft des Einkaufs durch KI und strategische Beratung.",
+    "copyright": "© 2026 Moritz van Laack. Alle Rechte vorbehalten.",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
+    "madeInCologne": "Made in Cologne mit"
+  }
+}

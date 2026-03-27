@@ -1,81 +1,106 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-
-const stats = [
-  { value: '70B+', label: 'EUR Optimized Spend' },
-  { value: '12+', label: 'Years Experience' },
-  { value: '25+', label: 'Successful Projects' },
-  { value: '20', label: 'Procurement Consultants' },
-];
+import { DecorativeFlowLines, AccentBlock } from './DecorativeLines';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-24 bg-neutral-50">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col lg:flex-row gap-16 items-start">
-          {/* Left column - Photo placeholder */}
+    <section id="about" className="relative bg-white overflow-hidden">
+      {/* Decorative flowing lines behind content */}
+      <DecorativeFlowLines />
+
+      {/* Portrait — pushed to the right side so full posture is visible */}
+      <div className="relative w-full bg-white overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 flex justify-end">
+          <div className="relative w-full max-w-[600px] h-[75vh]">
+            {/* Purple accent block behind portrait */}
+            <AccentBlock className="w-[160px] h-[240px] -left-8 top-[20%] opacity-80 z-[1]" />
+            <AccentBlock className="w-[120px] h-[180px] -right-4 bottom-[15%] opacity-70 z-[1]" />
+            <Image
+              src="/images/portrait-white.jpg"
+              alt="Moritz van Laack – Portrait"
+              fill
+              className="object-contain object-bottom relative z-[2]"
+              sizes="(max-width: 768px) 100vw, 600px"
+              priority
+              style={{ mixBlendMode: 'multiply' }}
+            />
+          </div>
+        </div>
+        {/* Subtle gradient fade at bottom for visual flow */}
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent z-[3]" />
+      </div>
+
+      {/* About text - 3-column layout like Burkhardt */}
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr_1fr] gap-8 md:gap-12">
+          {/* CTA column */}
+          <div>
+            <a
+              href="#contact"
+              className="inline-block rounded-full border-2 border-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white"
+            >
+              Schedule a Conversation
+            </a>
+          </div>
+
+          {/* Text column 1 */}
           <motion.div
-            className="w-full lg:w-[40%] flex-shrink-0"
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="text-lg leading-relaxed text-neutral-700"
           >
-            <div className="w-full max-w-[400px] h-[500px] rounded-2xl bg-neutral-200 flex items-center justify-center mx-auto lg:mx-0">
-              <span className="text-neutral-400 text-lg font-medium">Photo</span>
-            </div>
+            <p>
+              Strategy, a forward-looking perspective on what matters, and a clear stance.
+              With over 12 years in procurement and supply chain, I lead organizations through
+              the complex challenges of digital transformation.
+            </p>
+            <p className="mt-6">
+              From managing EUR 350M in beverage spend at REWE Group, to leading multi-million
+              euro digital transformation projects at MHP (A Porsche Company) and Accenture
+              Strategy, to serving as interim Head of IT &amp; Professional Services in Procurement
+              for a pharmaceutical sales company with EUR 500M+ spend — I&apos;ve built deep
+              expertise across the entire Source-to-Pay landscape.
+            </p>
           </motion.div>
 
-          {/* Right column - Bio */}
+          {/* Text column 2 */}
           <motion.div
-            className="w-full lg:w-[60%]"
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="text-lg leading-relaxed text-neutral-700"
           >
-            <h2 className="text-3xl font-bold text-neutral-900 mb-6">About Me</h2>
-
-            <p className="text-neutral-600 leading-relaxed mb-4">
-              As a procurement expert and entrepreneur based in Cologne, I&apos;ve spent over 12
-              years transforming how organizations buy. From managing EUR 350M in beverage spend at
-              REWE Group to leading multi-million euro digital transformation projects at MHP (A
-              Porsche Company) and Accenture Strategy, I&apos;ve built deep expertise across the
-              entire Source-to-Pay landscape.
+            <p>
+              As founder of van Laack &amp; partners and co-founder of Sourcera AI, I combine
+              enterprise-grade consulting with cutting-edge AI technology — because the best
+              procurement strategies deserve better tools.
             </p>
-
-            <p className="text-neutral-600 leading-relaxed mb-4">
-              In 2021, I founded van Laack &amp; partners to bring enterprise-grade procurement
-              consulting to ambitious organizations. In 2025, I co-founded Sourcera AI to automate
-              what I&apos;d been doing manually for a decade — because the best procurement
-              strategies deserve better tools.
+            <p className="mt-6">
+              With expertise as an entrepreneur, procurement strategist, and AI builder,
+              I stand for authentic sparring that is based on solid values and delivers
+              sustainable results.
             </p>
-
-            <p className="text-neutral-600 leading-relaxed mb-8">
-              I hold an MBA from HHL Leipzig Graduate School of Management and a BA in Trade
-              Management. I speak German, English, and have studied at Hanyang University Seoul and
-              Ballard High School Seattle.
-            </p>
-
-            {/* Stats strip */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  className="bg-white rounded-xl shadow-md p-5 border-t-4 border-primary text-center"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                >
-                  <div className="text-2xl font-bold text-neutral-900">{stat.value}</div>
-                  <div className="text-sm text-neutral-500 mt-1">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
         </div>
+      </div>
+
+      {/* Big section heading */}
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pb-20">
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-[clamp(2.5rem,7vw,6.5rem)] font-black leading-[0.95] tracking-tight text-neutral-900 uppercase"
+        >
+          Shaping the Future,<br />
+          Not Just Reacting.
+        </motion.h2>
       </div>
     </section>
   );

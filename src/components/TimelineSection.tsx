@@ -1,156 +1,143 @@
 'use client';
 
+import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
+import 'swiper/css';
 
 const timelineItems = [
   {
     year: '2025',
-    role: 'Founder & Managing Director',
-    company: 'Sourcera AI',
-    description:
-      'Co-founded AI procurement platform with Andreas Eiselt. Building the first end-to-end O2S solution.',
+    title: 'Sourcera AI',
+    role: 'CEO & Co-Founder',
+    description: 'Co-founded AI procurement platform. Building the first end-to-end O2S solution.',
   },
   {
-    year: '2021–Present',
+    year: '2024',
+    title: 'Pharmaceutical Sales Company',
+    role: 'Head of IT & Professional Services in Procurement (Interim)',
+    description: 'Interim role reporting to the CPO. Led IT and Professional Services in Procurement with a spend volume exceeding EUR 500M. April 2024 – March 2025.',
+  },
+  {
+    year: '2021',
+    title: 'van Laack & partners',
     role: 'Founder & CEO',
-    company: 'van Laack & partners',
-    description:
-      'Built a team of 20 procurement consultants. Leading projects like Interim Head of Global Category Management for a pharma wholesaler with EUR 500M+ spend.',
+    description: 'Built a team of 20 procurement consultants. Leading enterprise-grade procurement transformation.',
   },
   {
-    year: '2020–2021',
+    year: '2020',
+    title: 'Accenture Strategy',
     role: 'Manager, Supply Chain & Operations',
-    company: 'Accenture Strategy',
-    description:
-      'Led Zero-Based Strategy evaluations, digital transformation roadmaps, and best-of-breed tool implementations for Fortune 500 clients. Project volumes exceeding EUR 10M.',
+    description: 'Led Zero-Based Strategy evaluations and digital transformation roadmaps for Fortune 500 clients.',
   },
   {
-    year: '2019–2020',
-    role: 'Senior Consultant, Digital SCM',
-    company: 'MHP – A Porsche Company',
-    description:
-      'IT project lead for international SAP MM rollouts, SAP Ariba and Fieldglass implementations, and RPA & AI procurement automation projects.',
-  },
-  {
-    year: '2017–2018',
-    role: 'Consultant, Digital SCM',
-    company: 'MHP – A Porsche Company',
-    description:
-      'Entry into procurement technology consulting. First platform implementations.',
+    year: '2019',
+    title: 'HHL Leipzig',
+    role: 'MBA',
+    description: 'Executive MBA at HHL Leipzig Graduate School of Management.',
   },
   {
     year: '2017',
-    role: 'Category Manager',
-    company: 'REWE Group',
-    description:
-      'Managed EUR 350M in beverage procurement spend across 210 suppliers.',
+    title: 'MHP – A Porsche Company',
+    role: 'Consultant → Senior Consultant',
+    description: 'IT project lead for international SAP MM rollouts, Ariba and Fieldglass implementations.',
   },
   {
-    year: '2013–2016',
-    role: 'Dual Student',
-    company: 'REWE Group / EUFH Cologne',
-    description:
-      "BA in Trade Management. Awarded IHK 'Besten Ehrung' for outstanding achievement.",
+    year: '2017',
+    title: 'REWE Group',
+    role: 'Category Manager',
+    description: 'Managed EUR 350M in beverage procurement spend across 210 suppliers.',
   },
-];
-
-const education = [
-  { degree: 'MBA', institution: 'HHL Leipzig', years: '2019–2021' },
-  { degree: 'Exchange', institution: 'Hanyang Seoul', years: '2016' },
-  { degree: 'BA', institution: 'EUFH Cologne', years: '2013–2016' },
-  { degree: 'Exchange', institution: 'Ballard HS Seattle', years: '2010–2011' },
+  {
+    year: '2013',
+    title: 'EUFH Cologne / REWE Group',
+    role: 'BA Trade Management (Dual Studies)',
+    description: "Awarded IHK 'Besten Ehrung' for outstanding achievement.",
+  },
 ];
 
 export default function TimelineSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const swiperRef = useRef<SwiperType | null>(null);
+
   return (
-    <section id="track-record" className="py-24 bg-neutral-50">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
-        <motion.div
-          className="text-center mb-16"
+    <section id="track-record" className="py-32 bg-white overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        {/* Giant heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-[clamp(2.5rem,7vw,6.5rem)] font-black leading-[0.95] tracking-tight text-neutral-900 uppercase mb-8"
+        >
+          Work &times; Life &times;<br />High Performance
+        </motion.h2>
+
+        {/* Subtitle with red highlight */}
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-xl md:text-2xl leading-relaxed text-neutral-700 max-w-3xl mb-20"
         >
-          <h2 className="text-3xl font-bold text-neutral-900 mb-4">Track Record</h2>
-          <p className="text-neutral-500 text-lg max-w-2xl mx-auto">
-            From hands-on category management to C-suite strategy to entrepreneurship
-          </p>
-        </motion.div>
+          A career that seamlessly connects{' '}
+          <span className="text-primary font-medium">
+            strategic insights, innovation, and practical execution
+          </span>{' '}
+          — with a clear focus on building future-proof organizations.
+        </motion.p>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/30 -translate-x-1/2" />
-
-          <div className="space-y-12">
-            {timelineItems.map((item, index) => {
-              const isLeft = index % 2 === 0;
-
-              return (
-                <div key={index} className="relative flex items-start">
-                  {/* Dot */}
-                  <div className="absolute left-6 md:left-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow -translate-x-1/2 z-10 mt-1" />
-
-                  {/* Card - desktop alternating, mobile always right */}
-                  <motion.div
-                    className={`ml-14 md:ml-0 md:w-[45%] ${
-                      isLeft ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'
-                    }`}
-                    initial={{ opacity: 0, x: isLeft ? -40 : 40 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: '-50px' }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                  >
-                    <div className="bg-white rounded-xl shadow-md p-6">
-                      <span className="inline-block text-sm font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full mb-3">
-                        {item.year}
-                      </span>
-                      <h3 className="text-lg font-bold text-neutral-900">{item.role}</h3>
-                      <p className="text-sm font-medium text-primary mb-2">{item.company}</p>
-                      <p className="text-neutral-600 text-sm leading-relaxed">
-                        {item.description}
-                      </p>
-                    </div>
-                  </motion.div>
-                </div>
-              );
-            })}
-          </div>
+        {/* Year navigation - large numbers like Burkhardt */}
+        <div className="flex items-center gap-4 mb-6">
+          {timelineItems.map((item, i) => (
+            <button
+              key={`${item.year}-${i}`}
+              onClick={() => {
+                setActiveIndex(i);
+                swiperRef.current?.slideTo(i);
+              }}
+              className={`shrink-0 font-black transition-all duration-300 ${
+                i === activeIndex
+                  ? 'text-[clamp(2rem,5vw,4.5rem)] text-primary leading-none'
+                  : 'text-[clamp(1rem,2.5vw,2rem)] text-neutral-300 hover:text-neutral-400 leading-none'
+              }`}
+            >
+              {item.year}
+            </button>
+          ))}
         </div>
 
-        {/* Education overlay */}
-        <motion.div
-          className="mt-20"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.5 }}
+        {/* Timeline line */}
+        <div className="relative mb-12">
+          <div className="h-[2px] w-full bg-neutral-200" />
+        </div>
+
+        {/* Swiper content */}
+        <Swiper
+          modules={[Navigation]}
+          slidesPerView={1}
+          spaceBetween={32}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {education.map((edu, index) => (
-              <motion.div
-                key={edu.institution}
-                className="bg-white rounded-xl shadow-md p-5 flex items-start gap-4"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-              >
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <GraduationCap className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-neutral-900 text-sm">{edu.degree}</h4>
-                  <p className="text-sm text-neutral-600">{edu.institution}</p>
-                  <p className="text-xs text-neutral-400 mt-1">{edu.years}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+          {timelineItems.map((item, i) => (
+            <SwiperSlide key={`${item.year}-${item.title}-${i}`}>
+              <div className="py-4">
+                <h3 className="text-xl font-bold text-neutral-900 mb-1">{item.title}</h3>
+                <p className="text-sm font-medium text-neutral-500 mb-3">{item.role}</p>
+                <p className="text-base text-neutral-600 leading-relaxed">{item.description}</p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
