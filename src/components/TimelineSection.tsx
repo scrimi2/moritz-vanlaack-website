@@ -114,26 +114,6 @@ export default function TimelineSection() {
           — with a clear focus on building future-proof organizations.
         </motion.p>
 
-        {/* Year navigation - large numbers like Burkhardt */}
-        <div className="flex items-center gap-4 mb-6">
-          {timelineItems.map((item, i) => (
-            <button
-              key={`${item.year}-${i}`}
-              onClick={() => {
-                setActiveIndex(i);
-                swiperRef.current?.slideTo(i);
-              }}
-              className={`shrink-0 font-black transition-all duration-300 ${
-                i === activeIndex
-                  ? 'text-[clamp(2rem,5vw,4.5rem)] text-primary leading-none'
-                  : 'text-[clamp(1rem,2.5vw,2rem)] text-neutral-300 hover:text-neutral-400 leading-none'
-              }`}
-            >
-              {item.year}
-            </button>
-          ))}
-        </div>
-
         {/* Timeline line */}
         <div className="relative mb-12">
           <div className="h-[2px] w-full bg-neutral-200" />

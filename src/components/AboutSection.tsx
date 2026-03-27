@@ -28,12 +28,14 @@ export default function AboutSection() {
           />
 
           <div className="pt-4">
-            <a
-              href="#contact"
-              className="inline-block rounded-full border-2 border-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white mb-8"
-            >
-              Schedule a Conversation
-            </a>
+            <div className="text-right mb-8">
+              <a
+                href="#contact"
+                className="inline-block rounded-full border-2 border-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white"
+              >
+                Schedule a Conversation
+              </a>
+            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
