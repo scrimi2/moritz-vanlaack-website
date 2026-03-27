@@ -23,7 +23,7 @@ const ventures = [
     logo: '/images/vlp-logo.png',
     subtitle: 'CEO & Managing Director',
     description:
-      "360-degree supply chain management and procurement consulting. A team of 20 specialized consultants across Europe delivering enterprise-grade procurement transformation for the world's leading companies.",
+      "Procurement transformation and strategy consulting firm specializing in cost-cutting programs, strategic sourcing, and end-to-end supply chain optimization. A team of 20 specialized consultants across Europe serving the world's leading companies — and the hands-on experience that led to founding Sourcera AI.",
     stats: ['25+ Projects', '22 Partners', '20 Consultants'],
     customers: 'Serving Schaeffler, Mercedes-Benz, BASF, Siemens Energy, VW',
     link: { label: 'vanlaack-partners.com', href: 'https://vanlaack-partners.com' },
@@ -73,7 +73,7 @@ export default function VenturesSection() {
                       />
                     </div>
                   )}
-                  <h3 className="text-3xl md:text-4xl font-black text-neutral-900 mb-2 uppercase">{venture.title}</h3>
+                  {/* Logo serves as the title — no separate headline */}
                   <p className="text-base font-medium text-neutral-500 mb-6">{venture.subtitle}</p>
                   <p className="text-lg text-neutral-600 leading-relaxed mb-8">{venture.description}</p>
                   <p className="text-sm text-neutral-400 mb-6">{venture.customers}</p>

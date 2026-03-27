@@ -18,7 +18,8 @@ const timelineItems = [
   },
   {
     year: '2024',
-    title: 'Pharmaceutical Sales Company',
+    title: 'Phoenix Group',
+    logo: '/images/logos/phoenix.png',
     role: 'Head of IT & Professional Services in Procurement (Interim)',
     description: 'Interim role reporting to the CPO. Led IT and Professional Services in Procurement with a spend volume exceeding EUR 500M. April 2024 – March 2025.',
   },
@@ -27,14 +28,14 @@ const timelineItems = [
     title: 'van Laack & partners',
     logo: '/images/vlp-logo.png',
     role: 'Founder & CEO',
-    description: 'Built a team of 20 procurement consultants. Leading enterprise-grade procurement transformation.',
+    description: 'Founded a procurement transformation and strategy consulting firm. Built a team of 20 consultants delivering cost-cutting programs and strategic sourcing for leading enterprises — work that ultimately led to the creation of Sourcera AI.',
   },
   {
     year: '2021',
-    title: 'Harvard & Babson College',
+    title: 'Global Immersion Seminar',
     logo: '/images/logos/harvard.png',
-    role: 'Global Immersion Seminar',
-    description: 'Immersive seminar in Boston as part of the HHL MBA program. Sessions at Harvard Business School and Babson College.',
+    role: 'Harvard Business School & Babson College, Boston',
+    description: 'Intensive executive seminar in Boston exploring entrepreneurship, innovation ecosystems, and global business strategy with sessions at Harvard Business School and Babson College.',
   },
   {
     year: '2020',
