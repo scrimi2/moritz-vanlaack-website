@@ -11,7 +11,7 @@ export default function ContactCTA() {
       {/* Decorative side image - visible on large screens */}
       <div className="hidden xl:block absolute right-0 top-0 bottom-0 w-[30%] opacity-[0.07]">
         <Image
-          src="/images/office-phone.jpg"
+          src="/images/portrait-black.jpg"
           alt=""
           fill
           className="object-cover"

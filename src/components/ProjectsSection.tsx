@@ -10,18 +10,11 @@ import 'swiper/css';
 
 const projects = [
   {
-    title: 'IT & Professional Services Procurement',
-    industry: 'Pharmaceutical Sales',
+    title: 'Global Category Management & IT Procurement',
+    industry: 'Pharmaceutical / Pharma Wholesale',
     metric: 'Spend > EUR 500M',
     description:
-      'Interim Head of IT & Professional Services in Procurement, reporting to CPO. 8-month engagement leading procurement transformation.',
-  },
-  {
-    title: 'Global Category Management',
-    industry: 'Pharma Wholesaler',
-    metric: 'Spend > EUR 500M',
-    description:
-      'Led international team of Category Managers and Shared Service Center. Developed global procurement and cost reduction strategies.',
+      'Interim Head of IT & Professional Services in Procurement, reporting to CPO. Led international team of Category Managers and Shared Service Center. Developed global procurement and cost reduction strategies.',
   },
   {
     title: 'International Ivalua Roll-Out',

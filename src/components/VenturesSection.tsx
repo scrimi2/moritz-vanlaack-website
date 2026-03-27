@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { DecorativeFlowLines } from './DecorativeLines';
@@ -8,6 +9,7 @@ const ventures = [
   {
     year: 'Founded 2025',
     title: 'Sourcera AI',
+    logo: '/images/sourcera-logo.png',
     subtitle: 'CEO & Co-Founder',
     description:
       'The first end-to-end Opportunity-to-Savings (O2S) platform. Sourcera connects ERPs, Spend Cubes, and S2C platforms into one source of truth, using AI to transform fragmented procurement data into optimized tenders and measurable savings.',
@@ -18,6 +20,7 @@ const ventures = [
   {
     year: 'Founded 2021',
     title: 'van Laack & partners',
+    logo: '/images/vlp-logo.png',
     subtitle: 'CEO & Managing Director',
     description:
       "360-degree supply chain management and procurement consulting. A team of 20 specialized consultants across Europe delivering enterprise-grade procurement transformation for the world's leading companies.",
@@ -59,6 +62,17 @@ export default function VenturesSection() {
                   <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary mb-6">
                     {venture.year}
                   </span>
+                  {venture.logo && (
+                    <div className="mb-6 h-12 relative">
+                      <Image
+                        src={venture.logo}
+                        alt={`${venture.title} logo`}
+                        height={48}
+                        width={200}
+                        className="object-contain object-left h-12 w-auto"
+                      />
+                    </div>
+                  )}
                   <h3 className="text-3xl md:text-4xl font-black text-neutral-900 mb-2 uppercase">{venture.title}</h3>
                   <p className="text-base font-medium text-neutral-500 mb-6">{venture.subtitle}</p>
                   <p className="text-lg text-neutral-600 leading-relaxed mb-8">{venture.description}</p>

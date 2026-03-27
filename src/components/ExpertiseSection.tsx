@@ -43,14 +43,6 @@ const expertiseCards = [
   },
 ];
 
-const certifications = [
-  'Coupa',
-  'Ariba',
-  'Fieldglass (CWF/SOW)',
-  'Ivalua',
-  'Wescale/WPS4',
-];
-
 export default function ExpertiseSection() {
   return (
     <section id="expertise" className="relative py-32 px-6 lg:px-10 bg-neutral-50 overflow-hidden">
@@ -96,28 +88,6 @@ export default function ExpertiseSection() {
           ))}
         </div>
 
-        {/* Certifications */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-16"
-        >
-          <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400 mb-5">
-            Certifications
-          </h3>
-          <div className="flex flex-wrap items-center gap-3">
-            {certifications.map((cert) => (
-              <span
-                key={cert}
-                className="rounded-full border border-neutral-200 bg-white px-5 py-2.5 text-sm font-medium text-neutral-600"
-              >
-                {cert}
-              </span>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -11,6 +12,7 @@ const timelineItems = [
   {
     year: '2025',
     title: 'Sourcera AI',
+    logo: '/images/sourcera-logo.png',
     role: 'CEO & Co-Founder',
     description: 'Co-founded AI procurement platform. Building the first end-to-end O2S solution.',
   },
@@ -23,36 +25,56 @@ const timelineItems = [
   {
     year: '2021',
     title: 'van Laack & partners',
+    logo: '/images/vlp-logo.png',
     role: 'Founder & CEO',
     description: 'Built a team of 20 procurement consultants. Leading enterprise-grade procurement transformation.',
   },
   {
+    year: '2021',
+    title: 'Harvard & Babson College',
+    logo: '/images/logos/harvard.png',
+    role: 'Global Immersion Seminar',
+    description: 'Immersive seminar in Boston as part of the HHL MBA program. Sessions at Harvard Business School and Babson College.',
+  },
+  {
     year: '2020',
     title: 'Accenture Strategy',
+    logo: '/images/logos/accenture.png',
     role: 'Manager, Supply Chain & Operations',
     description: 'Led Zero-Based Strategy evaluations and digital transformation roadmaps for Fortune 500 clients.',
   },
   {
     year: '2019',
     title: 'HHL Leipzig',
+    logo: '/images/logos/hhl.png',
     role: 'MBA',
     description: 'Executive MBA at HHL Leipzig Graduate School of Management.',
   },
   {
     year: '2017',
     title: 'MHP – A Porsche Company',
+    logo: '/images/logos/mhp.png',
     role: 'Consultant → Senior Consultant',
     description: 'IT project lead for international SAP MM rollouts, Ariba and Fieldglass implementations.',
   },
   {
     year: '2017',
     title: 'REWE Group',
+    logo: '/images/logos/rewe.png',
     role: 'Category Manager',
     description: 'Managed EUR 350M in beverage procurement spend across 210 suppliers.',
   },
   {
+    year: '2014',
+    title: 'Hanyang University Seoul',
+    logo: '/images/logos/hanyang.png',
+    role: 'Exchange Semester – Business & Marketing',
+    description: 'Semester abroad focusing on international business strategy, marketing management, and cross-cultural trade in one of Asia\'s leading business programs.',
+  },
+  {
     year: '2013',
     title: 'EUFH Cologne / REWE Group',
+    logo: '/images/logos/eufh.png',
     role: 'BA Trade Management (Dual Studies)',
     description: "Awarded IHK 'Besten Ehrung' for outstanding achievement.",
   },
@@ -131,6 +153,17 @@ export default function TimelineSection() {
           {timelineItems.map((item, i) => (
             <SwiperSlide key={`${item.year}-${item.title}-${i}`}>
               <div className="py-4">
+                {item.logo && (
+                  <div className="mb-3 h-8">
+                    <Image
+                      src={item.logo}
+                      alt={`${item.title} logo`}
+                      height={32}
+                      width={120}
+                      className="object-contain object-left h-8 w-auto"
+                    />
+                  </div>
+                )}
                 <h3 className="text-xl font-bold text-neutral-900 mb-1">{item.title}</h3>
                 <p className="text-sm font-medium text-neutral-500 mb-3">{item.role}</p>
                 <p className="text-base text-neutral-600 leading-relaxed">{item.description}</p>
