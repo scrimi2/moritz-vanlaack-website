@@ -19,11 +19,11 @@ export default function AboutSection() {
             alt="Moritz van Laack – Portrait"
             className="float-left mr-8 mb-4 relative z-10"
             style={{
-              width: 'clamp(360px, 55vw, 720px)',
+              width: 'clamp(500px, 65vw, 900px)',
               height: 'auto',
               shapeOutside: 'url(/images/portrait-nobg.png)',
               shapeMargin: '24px',
-              shapeImageThreshold: '0.1',
+              shapeImageThreshold: '0.5',
             }}
           />
 
