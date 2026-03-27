@@ -10,26 +10,32 @@ export default function AboutSection() {
       {/* Decorative flowing lines behind content */}
       <DecorativeFlowLines />
 
-      {/* Portrait — pushed to the right side so full posture is visible */}
-      <div className="relative w-full bg-white overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 flex justify-end">
-          <div className="relative w-full max-w-[600px] h-[75vh]">
-            {/* Purple accent block behind portrait */}
-            <AccentBlock className="w-[160px] h-[240px] -left-8 top-[20%] opacity-80 z-[1]" />
-            <AccentBlock className="w-[120px] h-[180px] -right-4 bottom-[15%] opacity-70 z-[1]" />
+      {/* Portrait — left-aligned, full posture visible, no background */}
+      <div className="relative w-full overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 flex justify-start">
+          <div className="relative w-[500px] md:w-[550px] lg:w-[600px] h-[80vh] shrink-0">
+            {/* Purple accent blocks behind portrait */}
+            <div
+              className="absolute w-[160px] h-[240px] rounded-3xl -left-6 top-[18%] z-[1]"
+              style={{ backgroundColor: '#7c3aed' }}
+            />
+            <div
+              className="absolute w-[120px] h-[200px] rounded-3xl right-[-20px] bottom-[12%] z-[1]"
+              style={{ backgroundColor: '#7c3aed', opacity: 0.7 }}
+            />
             <Image
               src="/images/portrait-white.jpg"
               alt="Moritz van Laack – Portrait"
               fill
-              className="object-contain object-bottom relative z-[2]"
-              sizes="(max-width: 768px) 100vw, 600px"
+              className="object-contain object-bottom"
+              sizes="600px"
               priority
-              style={{ mixBlendMode: 'multiply' }}
+              style={{ position: 'relative', zIndex: 2, mixBlendMode: 'multiply' }}
             />
           </div>
         </div>
-        {/* Subtle gradient fade at bottom for visual flow */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent z-[3]" />
+        {/* Gradient fade at bottom */}
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent" style={{ zIndex: 3 }} />
       </div>
 
       {/* About text - 3-column layout like Burkhardt */}
