@@ -14,7 +14,7 @@ export default function AboutSection() {
         <div className="relative rounded-2xl border border-neutral-200 bg-neutral-50 overflow-hidden">
           <div className="flex flex-col lg:flex-row lg:items-end">
             {/* Portrait – bottom-aligned with box */}
-            <div className="lg:w-[40%] flex items-end justify-center relative z-10">
+            <div className="lg:w-[40%] flex items-end justify-start relative z-10">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/portrait-nobg.png"
