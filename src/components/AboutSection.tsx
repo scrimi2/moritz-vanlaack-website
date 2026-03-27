@@ -14,17 +14,17 @@ export default function AboutSection() {
         <div className="relative rounded-2xl border border-neutral-200 bg-neutral-50 overflow-hidden">
           <div className="flex flex-col lg:flex-row lg:items-end">
             {/* Portrait – bottom-aligned with box */}
-            <div className="lg:w-[40%] flex items-end justify-start relative z-10">
+            <div className="lg:w-[50%] flex items-end justify-start relative z-0 lg:-mr-16">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/portrait-nobg.png"
                 alt="Moritz van Laack – Portrait"
-                className="w-full max-w-[500px] h-auto object-contain object-bottom"
+                className="w-full h-auto object-contain object-bottom"
               />
             </div>
 
-            {/* Text content */}
-            <div className="lg:w-[60%] p-8 lg:p-12 flex flex-col justify-center">
+            {/* Text content — overlaps portrait arm slightly */}
+            <div className="lg:w-[55%] p-8 lg:p-12 flex flex-col justify-center relative z-10">
               <div className="text-right mb-8">
                 <a
                   href="#contact"
