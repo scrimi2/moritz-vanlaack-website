@@ -17,12 +17,12 @@ export default function AboutSection() {
           <img
             src="/images/portrait-nobg.png"
             alt="Moritz van Laack – Portrait"
-            className="float-left mr-8 mb-4"
+            className="float-left mr-8 mb-4 relative z-10"
             style={{
-              width: 'clamp(280px, 40vw, 520px)',
+              width: 'clamp(360px, 55vw, 720px)',
               height: 'auto',
               shapeOutside: 'url(/images/portrait-nobg.png)',
-              shapeMargin: '20px',
+              shapeMargin: '24px',
               shapeImageThreshold: '0.1',
             }}
           />
