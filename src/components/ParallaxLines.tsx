@@ -42,6 +42,8 @@ export default function ParallaxLines() {
   useEffect(() => {
     if (!containerRef.current) return;
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     const ctx = gsap.context(() => {
       const allStrokeElements = [
         ...layerARefs.current,
@@ -64,36 +66,38 @@ export default function ParallaxLines() {
         }
       );
 
-      // Parallax: each layer translates at a different rate
-      gsap.fromTo(
-        containerRef.current?.querySelectorAll('[data-parallax-layer="a"]') ?? [],
-        { yPercent: 30 },
-        {
-          yPercent: -30,
-          ease: 'none',
-          scrollTrigger: { trigger: 'body', start: 'top top', end: 'bottom bottom', scrub: 1.5 },
-        }
-      );
+      // Parallax: each layer translates at a different rate (skip if reduced motion)
+      if (!prefersReducedMotion) {
+        gsap.fromTo(
+          containerRef.current?.querySelectorAll('[data-parallax-layer="a"]') ?? [],
+          { yPercent: 30 },
+          {
+            yPercent: -30,
+            ease: 'none',
+            scrollTrigger: { trigger: 'body', start: 'top top', end: 'bottom bottom', scrub: 1.5 },
+          }
+        );
 
-      gsap.fromTo(
-        containerRef.current?.querySelectorAll('[data-parallax-layer="b"]') ?? [],
-        { yPercent: 15 },
-        {
-          yPercent: -15,
-          ease: 'none',
-          scrollTrigger: { trigger: 'body', start: 'top top', end: 'bottom bottom', scrub: 1.5 },
-        }
-      );
+        gsap.fromTo(
+          containerRef.current?.querySelectorAll('[data-parallax-layer="b"]') ?? [],
+          { yPercent: 15 },
+          {
+            yPercent: -15,
+            ease: 'none',
+            scrollTrigger: { trigger: 'body', start: 'top top', end: 'bottom bottom', scrub: 1.5 },
+          }
+        );
 
-      gsap.fromTo(
-        containerRef.current?.querySelectorAll('[data-parallax-layer="c"]') ?? [],
-        { yPercent: 8 },
-        {
-          yPercent: -8,
-          ease: 'none',
-          scrollTrigger: { trigger: 'body', start: 'top top', end: 'bottom bottom', scrub: 1.5 },
-        }
-      );
+        gsap.fromTo(
+          containerRef.current?.querySelectorAll('[data-parallax-layer="c"]') ?? [],
+          { yPercent: 8 },
+          {
+            yPercent: -8,
+            ease: 'none',
+            scrollTrigger: { trigger: 'body', start: 'top top', end: 'bottom bottom', scrub: 1.5 },
+          }
+        );
+      }
 
       const isDark = () => document.documentElement.classList.contains('dark');
 
@@ -153,7 +157,7 @@ export default function ParallaxLines() {
   const content = (
     <div
       ref={containerRef}
-      className="pointer-events-none fixed inset-0 hidden md:block"
+      className="pointer-events-none fixed inset-0"
       aria-hidden="true"
       style={{ opacity: 0, zIndex: 9999 }}
     >
