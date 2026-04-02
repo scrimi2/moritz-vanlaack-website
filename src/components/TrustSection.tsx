@@ -2,13 +2,14 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { DecorativeFlowLinesReverse, AccentBlock } from './DecorativeLines';
+import { useTranslations } from 'next-intl';
+import { AccentBlock } from './DecorativeLines';
 
 export default function TrustSection() {
+  const t = useTranslations('trust');
+
   return (
     <section className="relative py-32 px-6 lg:px-10 bg-neutral-50 overflow-hidden">
-      {/* Decorative flowing lines */}
-      <DecorativeFlowLinesReverse />
 
       <div className="relative z-10 mx-auto max-w-[1400px]">
         {/* Giant quote */}
@@ -19,8 +20,7 @@ export default function TrustSection() {
           transition={{ duration: 0.7 }}
           className="text-[clamp(1.5rem,4vw,3.5rem)] font-black leading-[1.05] tracking-tight text-neutral-900 uppercase mb-20"
         >
-          &bdquo;I firmly believe that it is the difficult times that show us what we are truly
-          capable of. Together, we find the right path.&ldquo;
+          &bdquo;{t('quote')}&ldquo;
         </motion.blockquote>
 
         <div className="flex flex-col lg:flex-row gap-16 items-start">
@@ -38,8 +38,8 @@ export default function TrustSection() {
               <AccentBlock className="w-[100px] h-[140px] -bottom-4 right-[calc(50%-60px)] opacity-70 z-0" />
               <div className="relative z-[1] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/office-phone-camera.jpg"
-                  alt="Moritz van Laack on the phone in the office"
+                  src="/images/portrait-black.jpg"
+                  alt={t('phoneAlt')}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 1024px) 50vw, 22vw"
@@ -48,7 +48,7 @@ export default function TrustSection() {
               <div className="relative z-[1] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg mt-8">
                 <Image
                   src="/images/office-laughing.jpg"
-                  alt="Moritz van Laack working and laughing"
+                  alt={t('laughAlt')}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 1024px) 50vw, 22vw"
@@ -66,24 +66,13 @@ export default function TrustSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h2 className="text-3xl md:text-4xl font-black text-neutral-900 uppercase mb-8">
-              Beyond Business
+              {t('title')}
             </h2>
 
             <div className="space-y-6 text-lg text-neutral-600 leading-relaxed">
-              <p>
-                In my consulting work, I repeatedly experience how important trust and interpersonal
-                connections are. Often conversations in challenging projects transcend pure business
-                frameworks, becoming personal and sometimes deeply meaningful.
-              </p>
-              <p>
-                [PLACEHOLDER - Add personal statement about your approach to building trust with
-                clients. What makes your consulting relationship different? What values drive your
-                work beyond the numbers?]
-              </p>
-              <p>
-                Listening takes priority — always before analysis. I want to ensure I support
-                clients not just in business matters but also where personal aspects come into play.
-              </p>
+              <p>{t('paragraph1')}</p>
+              <p>{t('paragraph2')}</p>
+              <p>{t('paragraph3')}</p>
             </div>
           </motion.div>
         </div>

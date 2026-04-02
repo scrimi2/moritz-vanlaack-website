@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="200" height="240">
+  <!-- Option 3: Taller, narrower — more cathedral-like proportions -->
+  <polygon points="15,10 15,230 105,230" fill="#a78bfa" opacity="0.8"/>
+  <polygon points="185,10 185,230 95,230" fill="#a78bfa" opacity="0.8"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Medium overlap, lightly rounded corners -->
+  <!-- Left triangle: top-left(15,15) → bottom-left(15,185) → bottom-right(125,185) -->
+  <path d="M 15,25 Q 15,15 25,15 L 25,15 Q 15,15 15,25 L 15,175 Q 15,185 25,185 L 115,185 Q 125,185 122,176 Z" fill="#8b5cf6" opacity="0.7"/>
+  <!-- Right triangle: top-right(185,15) → bottom-right(185,185) → bottom-left(75,185) -->
+  <path d="M 185,25 Q 185,15 175,15 L 175,15 Q 185,15 185,25 L 185,175 Q 185,185 175,185 L 85,185 Q 75,185 78,176 Z" fill="#8b5cf6" opacity="0.7"/>
+</svg>

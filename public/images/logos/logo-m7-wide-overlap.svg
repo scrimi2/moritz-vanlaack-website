@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Option 7: More overlap — bigger dark center zone -->
+  <polygon points="15,15 15,185 130,185" fill="#a78bfa" opacity="0.75"/>
+  <polygon points="185,15 185,185 70,185" fill="#a78bfa" opacity="0.75"/>
+</svg>

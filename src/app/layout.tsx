@@ -1,21 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Moritz van Laack | Procurement Expert & Entrepreneur",
-  description:
-    "Procurement expert, entrepreneur, and digital strategist based in Cologne. Founder of Sourcera AI and van Laack & partners. 12+ years experience, EUR 70B+ optimized spend.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    template: `%s | ${SITE_NAME}`,
+    default: `${SITE_NAME} | Procurement Expert & Entrepreneur`,
+  },
+  description: SITE_DESCRIPTION,
   keywords: [
     "Moritz van Laack",
     "procurement",
@@ -25,13 +17,30 @@ export const metadata: Metadata = {
     "supply chain",
     "procurement consulting",
     "Cologne",
+    "Einkauf",
+    "Beschaffung",
+    "Digitale Transformation",
+    "AI procurement",
+    "Opportunity-to-Savings",
+    "procurement transformation",
   ],
-  openGraph: {
-    title: "Moritz van Laack | Procurement Expert & Entrepreneur",
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_NAME} | Procurement Expert & Entrepreneur`,
     description:
-      "Founder of Sourcera AI & van Laack & partners. Transforming procurement through AI and strategic consulting.",
-    type: "website",
-    locale: "en_US",
+      "CEO & co-founder of Sourcera AI, founder of van Laack & partners. Transforming procurement through AI and strategic consulting.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -40,12 +49,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
-    </html>
-  );
+  return children;
 }

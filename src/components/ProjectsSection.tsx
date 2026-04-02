@@ -6,59 +6,24 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
+import { useTranslations } from 'next-intl';
 import 'swiper/css';
-
-const projects = [
-  {
-    title: 'Global Category Management & IT Procurement',
-    industry: 'Pharmaceutical / Pharma Wholesale',
-    metric: 'Spend > EUR 500M',
-    description:
-      'Interim Head of IT & Professional Services in Procurement, reporting to CPO. Led international team of Category Managers and Shared Service Center. Developed global procurement and cost reduction strategies.',
-  },
-  {
-    title: 'International Ivalua Roll-Out',
-    industry: 'Automotive Supplier',
-    metric: 'Project > EUR 1.4M',
-    description:
-      'Coordinated all work streams and led end-to-end process design for a global Ivalua implementation.',
-  },
-  {
-    title: 'S4/HANA Implementation',
-    industry: 'Global Battery Manufacturer',
-    metric: 'Project > EUR 3M',
-    description:
-      'S2P process analysis, implementation roadmap design, requirement workshops with international stakeholders.',
-  },
-  {
-    title: 'Global Coupa Roll-Out',
-    industry: 'Paper & Packaging',
-    metric: 'Project > EUR 1M',
-    description:
-      'Full S2C & P2P implementation including integration with multiple legacy systems.',
-  },
-  {
-    title: 'ZBx Digital Transformation',
-    industry: 'Chemicals Company',
-    metric: 'Project > EUR 10M',
-    description:
-      'Zero-Based Strategy evaluation and design of digital transformation procurement roadmap at Accenture Strategy.',
-  },
-  {
-    title: 'Best-of-Breed Procurement Tools',
-    industry: 'Retail Group',
-    metric: 'Project > EUR 8M',
-    description:
-      'Implementation of Sievo, Bonsai, and PerAngusta for an international building materials retailer.',
-  },
-];
 
 export default function ProjectsSection() {
   const swiperRef = useRef<SwiperType | null>(null);
+  const t = useTranslations('projects');
+
+  const projectKeys = ['project1', 'project2', 'project3', 'project4', 'project5', 'project6'] as const;
+  const projects = projectKeys.map((key) => ({
+    title: t(`items.${key}.title`),
+    industry: t(`items.${key}.industry`),
+    metric: t(`items.${key}.metric`),
+    description: t(`items.${key}.description`),
+  }));
 
   return (
-    <section id="projects" className="py-32 bg-white overflow-hidden">
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
+    <section id="projects" className="py-32 bg-background overflow-hidden">
+      <div className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
@@ -67,7 +32,9 @@ export default function ProjectsSection() {
             transition={{ duration: 0.7 }}
             className="text-[clamp(2.5rem,7vw,6.5rem)] font-black leading-[0.95] tracking-tight text-neutral-900 uppercase"
           >
-            Selected<br />Projects.
+            {t('title').split('\n').map((line: string, i: number) => (
+              <span key={i}>{line}{i === 0 && <br />}</span>
+            ))}
           </motion.h2>
 
           <div className="mt-8 md:mt-0 flex items-center gap-4">
@@ -92,20 +59,22 @@ export default function ProjectsSection() {
           modules={[Navigation]}
           slidesPerView={1}
           spaceBetween={20}
+          autoHeight={false}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
+          wrapperClass="swiper-wrapper !items-stretch"
           breakpoints={{
             640: { slidesPerView: 2, spaceBetween: 24 },
             1024: { slidesPerView: 3, spaceBetween: 28 },
           }}
         >
           {projects.map((project, index) => (
-            <SwiperSlide key={project.title}>
+            <SwiperSlide key={project.title} className="!h-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="rounded-2xl border border-neutral-200 bg-white p-8 min-h-[260px]"
+                className="rounded-2xl border border-neutral-900/10 dark:border-white/10 bg-background p-8 h-full flex flex-col"
               >
                 <span className="inline-block text-xs font-bold uppercase tracking-[0.15em] text-primary mb-4">
                   {project.industry}

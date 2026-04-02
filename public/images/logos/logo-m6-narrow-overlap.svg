@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Option 6: Less overlap — sharper M valley, more defined spires -->
+  <polygon points="20,15 20,185 105,185" fill="#a78bfa" opacity="0.8"/>
+  <polygon points="180,15 180,185 95,185" fill="#a78bfa" opacity="0.8"/>
+</svg>

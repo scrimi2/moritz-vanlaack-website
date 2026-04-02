@@ -8,7 +8,7 @@
 export function DecorativeFlowLines({ className = '' }: { className?: string }) {
   return (
     <svg
-      className={`pointer-events-none absolute inset-0 h-full w-full ${className}`}
+      className={`pointer-events-none absolute inset-0 -z-10 h-full w-full ${className}`}
       viewBox="0 0 1400 900"
       fill="none"
       preserveAspectRatio="xMidYMid slice"
@@ -49,7 +49,7 @@ export function DecorativeFlowLines({ className = '' }: { className?: string }) 
 export function DecorativeFlowLinesReverse({ className = '' }: { className?: string }) {
   return (
     <svg
-      className={`pointer-events-none absolute inset-0 h-full w-full ${className}`}
+      className={`pointer-events-none absolute inset-0 -z-10 h-full w-full ${className}`}
       viewBox="0 0 1400 900"
       fill="none"
       preserveAspectRatio="xMidYMid slice"

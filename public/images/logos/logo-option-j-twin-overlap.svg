@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="gradJ1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="gradJ2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#6d28d9" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="gradJ3" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Two spire groups that overlap in the middle like an M -->
+
+  <!-- LEFT SPIRE — 3 overlapping triangles -->
+  <polygon points="10,188 55,188 32,12" fill="url(#gradJ3)"/>
+  <polygon points="25,188 70,188 48,18" fill="url(#gradJ1)"/>
+  <polygon points="38,188 83,188 60,10" fill="url(#gradJ2)"/>
+
+  <!-- RIGHT SPIRE — 3 overlapping triangles -->
+  <polygon points="117,188 162,188 140,10" fill="url(#gradJ2)"/>
+  <polygon points="130,188 175,188 152,18" fill="url(#gradJ1)"/>
+  <polygon points="145,188 190,188 168,12" fill="url(#gradJ3)"/>
+
+  <!-- The overlap zone in center — creates the M valley naturally -->
+  <!-- The right edges of left cluster and left edges of right cluster overlap here -->
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="gradC1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="gradC2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Abstract forward-pointing arrow/prism made of 3 overlapping triangular shapes -->
+
+  <!-- Bottom layer - darker, offset left -->
+  <polygon points="30,160 100,40 120,160" fill="#6d28d9" opacity="0.6"/>
+
+  <!-- Middle layer - gradient -->
+  <polygon points="55,160 125,40 145,160" fill="url(#gradC1)" opacity="0.8"/>
+
+  <!-- Top layer - brightest, forward -->
+  <polygon points="80,160 150,40 170,160" fill="url(#gradC2)"/>
+
+  <!-- Accent line - horizontal momentum line -->
+  <line x1="20" y1="120" x2="85" y2="120" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <line x1="20" y1="130" x2="70" y2="130" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+
+  <!-- Small dot accent -->
+  <circle cx="170" cy="45" r="4" fill="#2563eb" opacity="0.6"/>
+</svg>

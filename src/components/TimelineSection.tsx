@@ -7,87 +7,43 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
-
-const timelineItems = [
-  {
-    year: '2025',
-    title: 'Sourcera AI',
-    logo: '/images/sourcera-logo.png',
-    role: 'CEO & Co-Founder',
-    description: 'Co-founded AI procurement platform. Building the first end-to-end O2S solution.',
-  },
-  {
-    year: '2024',
-    title: 'Phoenix Group',
-    logo: '/images/logos/phoenix.png',
-    role: 'Head of IT & Professional Services in Procurement (Interim)',
-    description: 'Interim role reporting to the CPO. Led IT and Professional Services in Procurement with a spend volume exceeding EUR 500M. April 2024 – March 2025.',
-  },
-  {
-    year: '2021',
-    title: 'van Laack & partners',
-    logo: '/images/vlp-logo.jpg',
-    role: 'Founder & CEO',
-    description: 'Founded a procurement transformation and strategy consulting firm. Built a team of 20 consultants delivering cost-cutting programs and strategic sourcing for leading enterprises — work that ultimately led to the creation of Sourcera AI.',
-  },
-  {
-    year: '2021',
-    title: 'Global Immersion Seminar',
-    logo: '/images/logos/harvard.png',
-    role: 'Harvard Business School & Babson College, Boston',
-    description: 'Intensive executive seminar in Boston exploring entrepreneurship, innovation ecosystems, and global business strategy with sessions at Harvard Business School and Babson College.',
-  },
-  {
-    year: '2020',
-    title: 'Accenture Strategy',
-    logo: '/images/logos/accenture.png',
-    role: 'Manager, Supply Chain & Operations',
-    description: 'Led Zero-Based Strategy evaluations and digital transformation roadmaps for Fortune 500 clients.',
-  },
-  {
-    year: '2019',
-    title: 'HHL Leipzig',
-    logo: '/images/logos/hhl.png',
-    role: 'MBA',
-    description: 'Executive MBA at HHL Leipzig Graduate School of Management.',
-  },
-  {
-    year: '2017',
-    title: 'MHP – A Porsche Company',
-    logo: '/images/logos/mhp.svg',
-    role: 'Consultant → Senior Consultant',
-    description: 'IT project lead for international SAP MM rollouts, Ariba and Fieldglass implementations.',
-  },
-  {
-    year: '2017',
-    title: 'REWE Group',
-    logo: '/images/logos/rewe.svg',
-    role: 'Category Manager',
-    description: 'Managed EUR 350M in beverage procurement spend across 210 suppliers.',
-  },
-  {
-    year: '2014',
-    title: 'Hanyang University Seoul',
-    logo: '/images/logos/hanyang.webp',
-    role: 'Exchange Semester – Business & Marketing',
-    description: 'Semester abroad focusing on international business strategy, marketing management, and cross-cultural trade in one of Asia\'s leading business programs.',
-  },
-  {
-    year: '2013',
-    title: 'EUFH Cologne / REWE Group',
-    logo: '/images/logos/eufh.png',
-    role: 'BA Trade Management (Dual Studies)',
-    description: "Awarded IHK 'Besten Ehrung' for outstanding achievement.",
-  },
-];
+import { useTranslations } from 'next-intl';
+import { clientLogos } from '@/data/clientLogos';
+// Start at 2025 (first item)
+const initialSlideIndex = 0;
 
 export default function TimelineSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(initialSlideIndex);
   const swiperRef = useRef<SwiperType | null>(null);
+  const t = useTranslations('timeline');
+
+  const timelineItems = [
+    { year: t('items.item1.year'), title: t('items.item1.title'), logo: '/images/sourcera-logo-transparent.png', darkLogo: null, darkInvert: false, role: t('items.item1.role'), description: t('items.item1.description') },
+    { year: t('items.item2.year'), title: t('items.item2.title'), logo: '/images/logos/phoenix.png', darkLogo: null, darkInvert: false, role: t('items.item2.role'), description: t('items.item2.description') },
+    { year: t('items.item3.year'), title: t('items.item3.title'), logo: '/images/vlp-logo-transparent.png', darkLogo: '/images/vlp-logo-transparent-dark.png', darkInvert: false, role: t('items.item3.role'), description: t('items.item3.description') },
+    { year: t('items.item4.year'), title: t('items.item4.title'), logo: '/images/logos/harvard.png', darkLogo: '/images/logos/harvard-dark.png', darkInvert: false, role: t('items.item4.role'), description: t('items.item4.description') },
+    { year: t('items.item5.year'), title: t('items.item5.title'), logo: '/images/logos/accenture.png', darkLogo: '/images/logos/accenture-dark.png', darkInvert: false, role: t('items.item5.role'), description: t('items.item5.description') },
+    { year: t('items.item6.year'), title: t('items.item6.title'), logo: '/images/logos/hhl.png', darkLogo: '/images/logos/hhl-dark.png', darkInvert: false, role: t('items.item6.role'), description: t('items.item6.description') },
+    { year: t('items.item7.year'), title: t('items.item7.title'), logo: '/images/logos/mhp.svg', darkLogo: null, darkInvert: false, role: t('items.item7.role'), description: t('items.item7.description') },
+    { year: t('items.item8.year'), title: t('items.item8.title'), logo: '/images/logos/rewe.svg', darkLogo: null, darkInvert: false, role: t('items.item8.role'), description: t('items.item8.description') },
+    { year: t('items.item9.year'), title: t('items.item9.title'), logo: '/images/logos/hanyang-transparent.png', darkLogo: null, darkInvert: false, role: t('items.item9.role'), description: t('items.item9.description') },
+    { year: t('items.item10.year'), title: t('items.item10.title'), logo: '/images/logos/eufh.png', darkLogo: null, darkInvert: false, role: t('items.item10.role'), description: t('items.item10.description') },
+  ];
+
+  // Get unique years and the first timeline index for each year
+  const uniqueYears = timelineItems.reduce<{ year: string; index: number }[]>((acc, item, i) => {
+    if (!acc.some((entry) => entry.year === item.year)) {
+      acc.push({ year: item.year, index: i });
+    }
+    return acc;
+  }, []);
+
+  // Determine which unique year is currently active
+  const activeYear = timelineItems[activeIndex]?.year;
 
   return (
-    <section id="track-record" className="py-32 bg-white overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <section id="track-record" className="relative py-32 bg-background overflow-hidden">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10">
         {/* Giant heading */}
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
@@ -96,27 +52,34 @@ export default function TimelineSection() {
           transition={{ duration: 0.7 }}
           className="text-[clamp(2.5rem,7vw,6.5rem)] font-black leading-[0.95] tracking-tight text-neutral-900 uppercase mb-8"
         >
-          Work &times; Life &times;<br />High Performance
+          {t('title').split('\n').map((line: string, i: number) => (
+            <span key={i}>{line}{i === 0 && <br />}</span>
+          ))}
         </motion.h2>
 
-        {/* Subtitle with red highlight */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl md:text-2xl leading-relaxed text-neutral-700 max-w-3xl mb-20"
-        >
-          A career that seamlessly connects{' '}
-          <span className="text-primary font-medium">
-            strategic insights, innovation, and practical execution
-          </span>{' '}
-          — with a clear focus on building future-proof organizations.
-        </motion.p>
+        {/* Year navigation - unique years only */}
+        <div className="flex items-center gap-4 mb-6 overflow-x-auto pb-2">
+          {uniqueYears.map((entry) => (
+            <button
+              key={entry.year}
+              onClick={() => {
+                setActiveIndex(entry.index);
+                swiperRef.current?.slideTo(entry.index);
+              }}
+              className={`shrink-0 font-black transition-all duration-300 ${
+                entry.year === activeYear
+                  ? 'text-[clamp(2rem,5vw,4.5rem)] text-primary leading-none'
+                  : 'text-[clamp(1rem,2.5vw,2rem)] text-neutral-300 hover:text-neutral-400 leading-none'
+              }`}
+            >
+              {entry.year}
+            </button>
+          ))}
+        </div>
 
         {/* Timeline line */}
         <div className="relative mb-12">
-          <div className="h-[2px] w-full bg-neutral-200" />
+          <div className="h-[2px] w-full bg-neutral-900/10 dark:bg-white/10" />
         </div>
 
         {/* Swiper content */}
@@ -124,6 +87,7 @@ export default function TimelineSection() {
           modules={[Navigation]}
           slidesPerView={1}
           spaceBetween={32}
+          initialSlide={initialSlideIndex}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           breakpoints={{
@@ -135,14 +99,33 @@ export default function TimelineSection() {
             <SwiperSlide key={`${item.year}-${item.title}-${i}`}>
               <div className="py-4">
                 {item.logo && (
-                  <div className="mb-3 h-8">
-                    <Image
-                      src={item.logo}
-                      alt={`${item.title} logo`}
-                      height={32}
-                      width={120}
-                      className="object-contain object-left h-8 w-auto"
-                    />
+                  <div className="mb-3 h-12">
+                    {item.darkLogo ? (
+                      <>
+                        <Image
+                          src={item.logo}
+                          alt={`${item.title} logo`}
+                          height={48}
+                          width={160}
+                          className="object-contain object-left h-12 w-auto dark:hidden"
+                        />
+                        <Image
+                          src={item.darkLogo}
+                          alt={`${item.title} logo`}
+                          height={48}
+                          width={160}
+                          className="object-contain object-left h-12 w-auto hidden dark:block"
+                        />
+                      </>
+                    ) : (
+                      <Image
+                        src={item.logo}
+                        alt={`${item.title} logo`}
+                        height={48}
+                        width={160}
+                        className={`object-contain object-left h-12 w-auto ${item.darkInvert ? 'dark:brightness-0 dark:invert' : ''}`}
+                      />
+                    )}
                   </div>
                 )}
                 <h3 className="text-xl font-bold text-neutral-900 mb-1">{item.title}</h3>
@@ -152,6 +135,31 @@ export default function TimelineSection() {
             </SwiperSlide>
           ))}
         </Swiper>
+
+        {/* Client logos carousel */}
+        <div className="mt-20 pt-12 border-t border-neutral-900/10 dark:border-white/10">
+          <div className="relative overflow-hidden">
+            <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-background to-transparent" />
+            <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-background to-transparent" />
+            <motion.div
+              className="flex w-max items-center gap-16"
+              animate={{ x: ['0%', '-50%'] }}
+              transition={{ x: { duration: 40, repeat: Infinity, ease: 'linear' } }}
+            >
+              {[...clientLogos, ...clientLogos].map((item, i) => (
+                <div key={`${item.name}-${i}`} className="shrink-0 flex items-center justify-center h-10">
+                  <Image
+                    src={item.logo}
+                    alt={`${item.name} logo`}
+                    width={120}
+                    height={36}
+                    className={`h-8 w-auto object-contain opacity-50 grayscale ${item.darkInvert ? 'dark:brightness-0 dark:invert' : ''}`}
+                  />
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

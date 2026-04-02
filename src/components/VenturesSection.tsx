@@ -3,37 +3,36 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import { DecorativeFlowLines } from './DecorativeLines';
-
-const ventures = [
-  {
-    year: 'Founded 2025',
-    title: 'Sourcera AI',
-    logo: '/images/sourcera-logo.png',
-    subtitle: 'CEO & Co-Founder',
-    description:
-      'The first end-to-end Opportunity-to-Savings (O2S) platform. Sourcera connects ERPs, Spend Cubes, and S2C platforms into one source of truth, using AI to transform fragmented procurement data into optimized tenders and measurable savings.',
-    stats: ['10-20% Additional Savings', '90% Less Manual Work', '10x Faster Execution'],
-    customers: 'Trusted by Phoenix Group, Zalando, Tesa',
-    link: { label: 'sourcera.ai', href: 'https://sourcera.ai' },
-  },
-  {
-    year: 'Founded 2021',
-    title: 'van Laack & partners',
-    logo: '/images/vlp-logo.jpg',
-    subtitle: 'CEO & Managing Director',
-    description:
-      "Procurement transformation and strategy consulting firm specializing in cost-cutting programs, strategic sourcing, and end-to-end supply chain optimization. A team of 20 specialized consultants across Europe serving the world's leading companies — and the hands-on experience that led to founding Sourcera AI.",
-    stats: ['25+ Projects', '22 Partners', '20 Consultants'],
-    customers: 'Serving Schaeffler, Mercedes-Benz, BASF, Siemens Energy, VW',
-    link: { label: 'vanlaack-partners.com', href: 'https://vanlaack-partners.com' },
-  },
-];
+import { useTranslations } from 'next-intl';
 
 export default function VenturesSection() {
+  const t = useTranslations('ventures');
+
+  const ventures = [
+    {
+      year: t('sourcera.year'),
+      title: t('sourcera.title'),
+      logo: '/images/sourcera-logo-transparent.png',
+      subtitle: t('sourcera.role'),
+      description: t('sourcera.description'),
+      stats: [t('sourcera.stat1'), t('sourcera.stat2'), t('sourcera.stat3')],
+      customers: t('sourcera.customers'),
+      link: { label: t('sourcera.linkLabel'), href: 'https://sourcera.ai' },
+    },
+    {
+      year: t('vanLaack.year'),
+      title: t('vanLaack.title'),
+      logo: '/images/vlp-logo-transparent.png',
+      subtitle: t('vanLaack.role'),
+      description: t('vanLaack.description'),
+      stats: [t('vanLaack.stat1'), t('vanLaack.stat2'), t('vanLaack.stat3')],
+      customers: t('vanLaack.customers'),
+      link: { label: t('vanLaack.linkLabel'), href: 'https://vanlaack-partners.com' },
+    },
+  ];
+
   return (
     <section id="ventures" className="relative py-32 bg-neutral-50 overflow-hidden">
-      <DecorativeFlowLines />
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10">
         {/* Big heading */}
         <motion.h2
@@ -43,45 +42,45 @@ export default function VenturesSection() {
           transition={{ duration: 0.7 }}
           className="text-[clamp(2.5rem,7vw,6.5rem)] font-black leading-[0.95] tracking-tight text-neutral-900 uppercase mb-20"
         >
-          My Ventures.
+          {t('title')}
         </motion.h2>
 
         <div className="space-y-12">
           {ventures.map((venture, index) => (
             <motion.div
               key={venture.title}
-              className="rounded-2xl bg-white p-10 md:p-14 border border-neutral-200"
+              className="rounded-2xl bg-background p-10 md:p-14 border border-neutral-900/10 dark:border-white/10"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
             >
-              <div className="flex flex-col lg:flex-row lg:items-start lg:gap-16">
+              <div className="relative flex flex-col lg:flex-row lg:items-center lg:gap-16">
                 {/* Left side */}
-                <div className="lg:w-[60%]">
-                  <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary mb-6">
+                <div className="relative lg:w-[60%]">
+                  <span className="relative z-10 inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary mb-6">
                     {venture.year}
                   </span>
                   {venture.logo && (
-                    <div className="mb-6 h-12 relative">
+                    <div className="absolute top-6 right-6 lg:top-10 lg:right-10 opacity-10 pointer-events-none z-0">
                       <Image
                         src={venture.logo}
                         alt={`${venture.title} logo`}
-                        height={48}
-                        width={200}
-                        className="object-contain object-left h-12 w-auto"
+                        height={280}
+                        width={280}
+                        className="object-contain h-[200px] lg:h-[280px] w-auto"
                       />
                     </div>
                   )}
-                  {/* Logo serves as the title — no separate headline */}
-                  <p className="text-base font-medium text-neutral-500 mb-6">{venture.subtitle}</p>
-                  <p className="text-lg text-neutral-600 leading-relaxed mb-8">{venture.description}</p>
-                  <p className="text-sm text-neutral-400 mb-6">{venture.customers}</p>
+                  <h3 className="relative z-10 text-3xl font-black text-neutral-900 uppercase mb-2">{venture.title}</h3>
+                  <p className="relative z-10 text-base font-medium text-neutral-500 mb-6">{venture.subtitle}</p>
+                  <p className="relative z-10 text-lg text-neutral-600 leading-relaxed mb-8">{venture.description}</p>
+                  <p className="relative z-10 text-sm text-neutral-400 mb-6">{venture.customers}</p>
                   <a
                     href={venture.link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-sm font-bold text-neutral-900 hover:text-primary transition-colors"
+                    className="relative z-10 inline-flex items-center gap-1 text-sm font-bold text-neutral-900 hover:text-primary transition-colors"
                   >
                     {venture.link.label}
                     <ArrowUpRight className="h-4 w-4" />
@@ -94,7 +93,7 @@ export default function VenturesSection() {
                     {venture.stats.map((stat) => (
                       <div
                         key={stat}
-                        className="rounded-xl bg-neutral-50 px-6 py-5 text-base font-semibold text-neutral-800 border border-neutral-100 border-l-4 border-l-primary"
+                        className="rounded-xl bg-background px-6 py-5 text-base font-semibold text-neutral-800 border border-neutral-900/10 dark:border-white/10 border-l-4 border-l-primary"
                       >
                         {stat}
                       </div>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Left triangle gradient: light on left, darker toward hypotenuse -->
+    <linearGradient id="gL" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c4b5fd"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <!-- Right triangle gradient: darker toward hypotenuse, light on right -->
+    <linearGradient id="gR" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#c4b5fd"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left right-triangle: peak top-left, vertical cathetus on left, horizontal cathetus on bottom, hypotenuse toward center -->
+  <polygon points="10,10 10,190 140,190" fill="url(#gL)" opacity="0.75"/>
+
+  <!-- Right right-triangle: peak top-right, vertical cathetus on right, horizontal cathetus on bottom, hypotenuse toward center -->
+  <polygon points="190,10 190,190 60,190" fill="url(#gR)" opacity="0.75"/>
+</svg>

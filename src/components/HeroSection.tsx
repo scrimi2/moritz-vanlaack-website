@@ -3,15 +3,13 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const headlines = [
-  'TRANSFORMING PROCUREMENT THROUGH AI AND STRATEGY',
-  'EUR 70B+ IN OPTIMIZED SPEND',
-  'FROM CATEGORY MANAGEMENT TO AI-POWERED PROCUREMENT',
-];
+import { useTranslations } from 'next-intl';
 
 export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const t = useTranslations('hero');
+
+  const headlines = [t('headline1'), t('headline2'), t('headline3')];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,7 +23,7 @@ export default function HeroSection() {
       {/* Background image with overlay */}
       <Image
         src="/images/stage-keynote.jpg"
-        alt=""
+        alt={t('imageAlt')}
         fill
         className="object-cover object-[center_30%]"
         sizes="100vw"

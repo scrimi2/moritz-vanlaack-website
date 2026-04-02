@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="gradH" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circle container -->
+  <circle cx="100" cy="100" r="92" fill="url(#gradH)"/>
+
+  <!-- White abstract M / Cathedral mark inside -->
+  <!-- Two spires forming an M — clean geometric style -->
+  <path d="M 40 155
+           L 40 80 L 70 35 L 100 85 L 130 35 L 160 80 L 160 155"
+        fill="none" stroke="white" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- Subtle base line -->
+  <line x1="40" y1="155" x2="160" y2="155" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Tiny spire tip accents -->
+  <line x1="70" y1="28" x2="70" y2="38" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <line x1="130" y1="28" x2="130" y2="38" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+</svg>

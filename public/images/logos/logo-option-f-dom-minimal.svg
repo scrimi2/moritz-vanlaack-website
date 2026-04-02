@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="gradF" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Filled abstract M-cathedral silhouette -->
+  <!-- Single continuous shape: two pointed spires with M valley -->
+  <path d="M 20 180
+           L 20 85 L 60 15 L 100 100 L 140 15 L 180 85 L 180 180
+           Z"
+        fill="url(#gradF)"/>
+
+  <!-- Negative space: cathedral window arches cut into the shape -->
+  <!-- Left arch window -->
+  <path d="M 45 180 L 45 110 Q 60 85 75 110 L 75 180 Z" fill="white"/>
+
+  <!-- Right arch window -->
+  <path d="M 125 180 L 125 110 Q 140 85 155 110 L 155 180 Z" fill="white"/>
+
+  <!-- Small circular window center -->
+  <circle cx="100" cy="130" r="10" fill="white"/>
+</svg>

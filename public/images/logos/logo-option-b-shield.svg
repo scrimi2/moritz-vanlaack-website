@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="200" height="240">
+  <defs>
+    <linearGradient id="gradB" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="gradBinner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shield shape -->
+  <path d="M 100 10 L 185 45 L 185 120 Q 185 190 100 230 Q 15 190 15 120 L 15 45 Z"
+        fill="url(#gradB)" stroke="none"/>
+
+  <!-- Inner shield border -->
+  <path d="M 100 24 L 173 54 L 173 118 Q 173 180 100 216 Q 27 180 27 118 L 27 54 Z"
+        fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+
+  <!-- Horizontal divider line -->
+  <line x1="50" y1="100" x2="150" y2="100" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+  <!-- "M" top section -->
+  <text x="100" y="88" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+        font-size="42" font-weight="800" fill="white" letter-spacing="2">M</text>
+
+  <!-- "vL" bottom section -->
+  <text x="100" y="148" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+        font-size="36" font-weight="300" font-style="italic" fill="rgba(255,255,255,0.9)" letter-spacing="1">vL</text>
+
+  <!-- Small decorative diamond at top -->
+  <polygon points="100,32 106,40 100,48 94,40" fill="rgba(255,255,255,0.5)"/>
+</svg>

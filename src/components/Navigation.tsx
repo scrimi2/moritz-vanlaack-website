@@ -3,19 +3,22 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-
-const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Ventures', href: '#ventures' },
-  { label: 'Track Record', href: '#track-record' },
-  { label: 'Expertise', href: '#expertise' },
-  { label: 'Contact', href: '#contact' },
-];
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from './LanguageSwitcher';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [lang, setLang] = useState<'EN' | 'DE'>('EN');
+  const t = useTranslations('nav');
+
+  const navLinks = [
+    { label: t('about'), href: '#about' },
+    { label: t('ventures'), href: '#ventures' },
+    { label: t('trackRecord'), href: '#track-record' },
+    { label: t('expertise'), href: '#expertise' },
+    { label: t('contact'), href: '#contact' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,21 +41,19 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-2xl backdrop-saturate-200 ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-sm shadow-[0_1px_0_0_rgba(0,0,0,0.06)]'
-          : 'bg-white'
+          ? 'bg-white/80 dark:bg-black/80 border-b border-black/10 dark:border-white/10 shadow-sm'
+          : 'bg-white/70 dark:bg-black/70 border-b border-black/5 dark:border-white/5'
       }`}
     >
-      {/* Top accent line */}
-      <div className="h-[3px] w-full bg-primary" />
 
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="flex h-14 items-center justify-between md:h-16">
           {/* Logo / Name */}
           <a
             href="#"
-            className="text-base font-medium text-neutral-900"
+            className="text-base font-semibold text-black dark:text-white"
           >
             Moritz van Laack
           </a>
@@ -63,46 +64,30 @@ export default function Navigation() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-neutral-600 transition-colors hover:text-neutral-900"
+                className="text-[15px] font-medium text-black/80 dark:text-white/80 transition-colors hover:text-black dark:hover:text-white"
               >
                 {link.label}
               </a>
             ))}
 
             <a
-              href="#contact"
-              className="rounded-full border border-primary px-5 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white"
+              href="https://www.linkedin.com/in/moritz-van-laack-99a073142/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-black text-white dark:bg-white dark:text-black px-5 py-2 text-[15px] font-medium transition-opacity hover:opacity-80"
             >
-              Let&apos;s Connect
+              {t('letsConnect')}
             </a>
 
-            {/* Language toggle */}
-            <div className="flex items-center gap-1 text-sm">
-              <button
-                onClick={() => setLang('EN')}
-                className={`font-medium transition-colors ${
-                  lang === 'EN' ? 'text-primary' : 'text-neutral-400 hover:text-neutral-600'
-                }`}
-              >
-                EN
-              </button>
-              <span className="text-neutral-300">|</span>
-              <button
-                onClick={() => setLang('DE')}
-                className={`font-medium transition-colors ${
-                  lang === 'DE' ? 'text-primary' : 'text-neutral-400 hover:text-neutral-600'
-                }`}
-              >
-                DE
-              </button>
-            </div>
+            <ThemeToggle />
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="text-neutral-900 md:hidden"
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            className="text-black dark:text-white md:hidden"
+            aria-label={mobileOpen ? t('closeMenu') : t('openMenu')}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -117,7 +102,7 @@ export default function Navigation() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="overflow-hidden border-t border-neutral-100 bg-white md:hidden"
+            className="overflow-hidden border-t border-black/10 dark:border-white/10 bg-white/90 dark:bg-black/90 backdrop-blur-2xl md:hidden"
           >
             <div className="flex flex-col gap-1 px-6 py-6">
               {navLinks.map((link) => (
@@ -125,32 +110,23 @@ export default function Navigation() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-4 py-3 text-sm font-medium text-neutral-700 transition-colors hover:bg-neutral-50"
+                  className="rounded-lg px-4 py-3 text-[15px] font-medium text-black/80 dark:text-white/80 transition-colors hover:bg-black/5 dark:hover:bg-white/10 hover:text-black dark:hover:text-white"
                 >
                   {link.label}
                 </a>
               ))}
               <a
-                href="#contact"
+                href="https://www.linkedin.com/in/moritz-van-laack-99a073142/"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="mt-4 rounded-full border border-neutral-900 px-5 py-3 text-center text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white"
+                className="mt-4 rounded-full bg-black text-white dark:bg-white dark:text-black px-5 py-3 text-center text-[15px] font-medium transition-opacity hover:opacity-80"
               >
-                Let&apos;s Connect
+                {t('letsConnect')}
               </a>
-              <div className="mt-4 flex items-center justify-center gap-2 text-sm">
-                <button
-                  onClick={() => setLang('EN')}
-                  className={`font-medium ${lang === 'EN' ? 'text-primary' : 'text-neutral-400'}`}
-                >
-                  EN
-                </button>
-                <span className="text-neutral-300">|</span>
-                <button
-                  onClick={() => setLang('DE')}
-                  className={`font-medium ${lang === 'DE' ? 'text-primary' : 'text-neutral-400'}`}
-                >
-                  DE
-                </button>
+              <div className="mt-4 flex items-center justify-center gap-4">
+                <ThemeToggle />
+                <LanguageSwitcher />
               </div>
             </div>
           </motion.div>

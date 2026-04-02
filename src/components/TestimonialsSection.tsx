@@ -3,41 +3,38 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { DecorativeFlowLinesReverse } from './DecorativeLines';
-
-const testimonials = [
-  {
-    quote:
-      'SOURCERA.AI IS SHOWING US HOW PROCUREMENT EFFICIENCY CAN SCALE. WHAT ONCE TOOK MONTHS OF MANUAL WORK IS NOW GENERATED IN DAYS. THIS IS A POTENTIAL GAME CHANGER FOR LARGE AND COMPLEX ORGANIZATIONS LIKE OURS.',
-    name: 'Dirk Thiemann',
-    title: 'CPO, Phoenix Group',
-  },
-  {
-    quote:
-      'SOURCERA.AI HELPS US TURN DATA INTO SOURCING ACTIONS WITHIN DAYS. WE CAN RAPIDLY RECLASSIFY SPEND, DETECT OVERLAPS AND LAUNCH INITIATIVES THAT DELIVER MEASURABLE SAVINGS.',
-    name: 'Alejandro Basterrechea',
-    title: 'CPO, Zalando',
-  },
-  {
-    quote:
-      '[PLACEHOLDER] MORITZ AND HIS TEAM DELIVERED EXCEPTIONAL RESULTS IN OUR PROCUREMENT TRANSFORMATION PROJECT. THEIR COMBINATION OF STRATEGIC THINKING AND HANDS-ON EXECUTION IS RARE.',
-    name: '[Client Name]',
-    title: '[Title, Company]',
-  },
-  {
-    quote:
-      '[PLACEHOLDER] THE ZERO-UP APPROACH GAVE US CONFIDENCE FROM DAY ONE. WE SAW MEASURABLE SAVINGS WITHIN WEEKS, NOT MONTHS.',
-    name: '[Client Name]',
-    title: '[Title, Company]',
-  },
-];
+import { useTranslations } from 'next-intl';
 
 export default function TestimonialsSection() {
   const [activeTab, setActiveTab] = useState(0);
+  const t = useTranslations('testimonials');
+
+  const testimonials = [
+    {
+      quote: t('items.testimonial3.quote'),
+      name: t('items.testimonial3.name'),
+      title: t('items.testimonial3.role'),
+      image: '/images/testimonials/tim-wisiorek.jpg',
+      industry: t('items.testimonial3.industry'),
+    },
+    {
+      quote: t('items.testimonial2.quote'),
+      name: t('items.testimonial2.name'),
+      title: t('items.testimonial2.role'),
+      image: '/images/testimonials/jeremy-schwarz.jpg',
+      industry: t('items.testimonial2.industry'),
+    },
+    {
+      quote: t('items.testimonial1.quote'),
+      name: t('items.testimonial1.name'),
+      title: t('items.testimonial1.role'),
+      image: '/images/testimonials/dirk-thiemann.jpg',
+      industry: t('items.testimonial1.industry'),
+    },
+  ];
 
   return (
-    <section id="testimonials" className="relative py-32 px-6 lg:px-10 bg-white overflow-hidden">
-      <DecorativeFlowLinesReverse />
+    <section id="testimonials" className="relative py-32 px-6 lg:px-10 bg-background overflow-hidden">
       <div className="relative z-10 mx-auto max-w-[1400px]">
         {/* Giant heading */}
         <motion.h2
@@ -47,22 +44,33 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.7 }}
           className="text-[clamp(2.5rem,7vw,6.5rem)] font-black leading-[0.95] tracking-tight text-neutral-900 uppercase mb-20"
         >
-          Real Experiences.<br />Real Results.
+          {t('title').split('\n').map((line: string, i: number) => (
+            <span key={i}>{line}{i === 0 && <br />}</span>
+          ))}
         </motion.h2>
 
         {/* Testimonial card */}
-        <div className="rounded-2xl border border-neutral-200 border-l-4 border-l-primary p-8 md:p-14">
+        <div className="rounded-2xl border border-neutral-900/10 dark:border-white/10 border-l-4 border-l-primary p-8 md:p-14">
           <div className="flex flex-col md:flex-row gap-10 items-start">
             {/* Avatar */}
-            <div className="shrink-0 w-40 h-48 rounded-xl overflow-hidden relative shadow-md">
-              <Image
-                src="/images/portrait-black.jpg"
-                alt="Moritz van Laack"
-                fill
-                className="object-cover object-top"
-                sizes="160px"
-              />
-            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="shrink-0 w-40 h-48 rounded-xl overflow-hidden relative shadow-md"
+              >
+                <Image
+                  src={testimonials[activeTab].image}
+                  alt={testimonials[activeTab].name}
+                  fill
+                  className="object-cover object-top"
+                  sizes="160px"
+                />
+              </motion.div>
+            </AnimatePresence>
 
             {/* Quote */}
             <AnimatePresence mode="wait">
@@ -74,8 +82,11 @@ export default function TestimonialsSection() {
                 transition={{ duration: 0.4 }}
                 className="flex-1"
               >
-                <blockquote className="text-[clamp(1rem,2.5vw,1.75rem)] font-bold leading-[1.2] text-neutral-900 uppercase mb-8">
-                  &bdquo;{testimonials[activeTab].quote}&ldquo;
+                <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">
+                  {testimonials[activeTab].industry}
+                </p>
+                <blockquote className="text-lg md:text-xl font-medium leading-relaxed text-neutral-700 italic mb-8">
+                  &ldquo;{testimonials[activeTab].quote}&rdquo;
                 </blockquote>
 
                 <div>
@@ -93,7 +104,7 @@ export default function TestimonialsSection() {
 
         {/* Tab navigation */}
         <div className="flex gap-4 mt-8">
-          {testimonials.map((t, i) => (
+          {testimonials.map((item, i) => (
             <button
               key={i}
               onClick={() => setActiveTab(i)}

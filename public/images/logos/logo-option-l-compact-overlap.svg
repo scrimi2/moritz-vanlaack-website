@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="gradL1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="gradL2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#6d28d9" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="gradL3" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Compact M shape — two tight spire clusters that heavily overlap in center -->
+
+  <!-- LEFT SPIRE -->
+  <polygon points="15,185 60,185 38,15" fill="url(#gradL3)"/>
+  <polygon points="30,185 75,185 52,10" fill="url(#gradL1)"/>
+  <polygon points="42,185 87,185 65,18" fill="url(#gradL2)"/>
+
+  <!-- RIGHT SPIRE -->
+  <polygon points="113,185 158,185 135,18" fill="url(#gradL2)"/>
+  <polygon points="125,185 170,185 148,10" fill="url(#gradL1)"/>
+  <polygon points="140,185 185,185 162,15" fill="url(#gradL3)"/>
+
+  <!-- CENTER bridging triangle — inverted, pointing down to form the M valley -->
+  <polygon points="75,55 125,55 100,145" fill="url(#gradL1)" opacity="0.4"/>
+</svg>

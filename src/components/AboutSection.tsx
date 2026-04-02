@@ -1,36 +1,37 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { DecorativeFlowLines } from './DecorativeLines';
-
+import { useTranslations } from 'next-intl';
 export default function AboutSection() {
+  const t = useTranslations('about');
+
   return (
-    <section id="about" className="relative bg-white overflow-hidden">
-      {/* Decorative flowing lines behind content */}
-      <DecorativeFlowLines />
+    <section id="about" className="relative bg-background overflow-hidden">
 
       {/* About box: portrait left, text right, portrait bottom-aligned with box */}
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-20">
-        <div className="relative rounded-2xl border border-neutral-200 bg-neutral-50 overflow-hidden">
+      <div className="relative z-[10] max-w-[1400px] mx-auto px-6 lg:px-10 pt-12 pb-20 lg:py-20">
+        <div className="relative overflow-visible bg-background">
           <div className="flex flex-col lg:flex-row lg:items-end">
-            {/* Portrait – bottom-aligned with box */}
-            <div className="lg:w-[50%] flex items-end justify-start relative z-0 lg:-mr-16">
+            {/* Portrait – cropped tight to person, bottom-aligned with text */}
+            <div className="lg:w-[45%] relative z-[10] flex items-end justify-center overflow-hidden -mx-6 lg:mx-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/portrait-nobg.png"
-                alt="Moritz van Laack – Portrait"
-                className="w-full h-auto object-contain object-bottom"
+                alt={t('photoAlt')}
+                className="w-[130%] max-w-none h-auto object-contain object-bottom"
               />
             </div>
 
-            {/* Text content — overlaps portrait arm slightly */}
-            <div className="lg:w-[55%] p-8 lg:p-12 flex flex-col justify-center relative z-10">
-              <div className="text-right mb-8">
+            {/* Text content */}
+            <div className="lg:w-[55%] pt-4 pb-8 lg:p-14 flex flex-col justify-end relative z-10">
+              <div className="text-center lg:text-right mb-8">
                 <a
-                  href="#contact"
+                  href="https://outlook.office.com/bookwithme/user/fbd9622be8c048e0bfb0b02b4ccf1178@vanlaack-partners.com/meetingtype/GQdnY87zkU2MGQwjYwNKXQ2?anonymous&ismsaljsauthenabled&ep=mlink"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block rounded-full border-2 border-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white"
                 >
-                  Schedule a Conversation
+                  {t('scheduleCta')}
                 </a>
               </div>
 
@@ -39,19 +40,13 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="text-lg leading-relaxed text-neutral-700 mb-8"
+                className="text-lg leading-relaxed text-neutral-700 mb-8 text-center lg:text-left"
               >
                 <p>
-                  Strategy, a forward-looking perspective on what matters, and a clear stance.
-                  With over 12 years in procurement and supply chain, I lead organizations through
-                  the complex challenges of digital transformation.
+                  {t('paragraph1')}
                 </p>
                 <p className="mt-6">
-                  From managing EUR 350M in beverage spend at REWE Group, to leading multi-million
-                  euro digital transformation projects at MHP (A Porsche Company) and Accenture
-                  Strategy, to serving as interim Head of IT &amp; Professional Services in Procurement
-                  for a pharmaceutical sales company with EUR 500M+ spend — I&apos;ve built deep
-                  expertise across the entire Source-to-Pay landscape.
+                  {t('paragraph2')}
                 </p>
               </motion.div>
 
@@ -60,17 +55,13 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.15 }}
-                className="text-lg leading-relaxed text-neutral-700"
+                className="text-lg leading-relaxed text-neutral-700 text-center lg:text-left"
               >
                 <p>
-                  As founder of van Laack &amp; partners and co-founder of Sourcera AI, I combine
-                  enterprise-grade consulting with cutting-edge AI technology — because the best
-                  procurement strategies deserve better tools.
+                  {t('paragraph3')}
                 </p>
                 <p className="mt-6">
-                  With expertise as an entrepreneur, procurement strategist, and AI builder,
-                  I stand for authentic sparring that is based on solid values and delivers
-                  sustainable results.
+                  {t('paragraph4')}
                 </p>
               </motion.div>
             </div>
@@ -79,7 +70,7 @@ export default function AboutSection() {
       </div>
 
       {/* Big section heading */}
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pb-20">
+      <div className="relative z-[10] max-w-[1400px] mx-auto px-6 lg:px-10 pb-20">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,8 +78,9 @@ export default function AboutSection() {
           transition={{ duration: 0.7 }}
           className="text-[clamp(2.5rem,7vw,6.5rem)] font-black leading-[0.95] tracking-tight text-neutral-900 uppercase"
         >
-          Shaping the Future,<br />
-          Not Just Reacting.
+          {t('title').split('\n').map((line: string, i: number) => (
+            <span key={i}>{line}{i === 0 && <br />}</span>
+          ))}
         </motion.h2>
       </div>
     </section>

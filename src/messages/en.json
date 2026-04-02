@@ -1,0 +1,356 @@
+{
+  "nav": {
+    "about": "About",
+    "ventures": "Ventures",
+    "trackRecord": "Track Record",
+    "expertise": "Expertise",
+    "contact": "Contact",
+    "letsConnect": "Let's Connect",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu"
+  },
+  "hero": {
+    "tagline": "Procurement Expert. Entrepreneur. Digital Strategist.",
+    "headline1": "Transforming Procurement Through AI and Strategy",
+    "headline2": "EUR 70B+ in Optimized Spend",
+    "headline3": "From Category Management to AI-Powered Procurement",
+    "subtitle": "I build procurement strategies, teams, and technologies that deliver measurable results.",
+    "cta": "Schedule a Conversation",
+    "imageAlt": "Moritz van Laack speaking at a keynote on stage"
+  },
+  "about": {
+    "title": "Shaping the Future,\nNot Just Reacting.",
+    "photoAlt": "Moritz van Laack – Portrait",
+    "scheduleCta": "Schedule a Conversation",
+    "paragraph1": "Strategy, a forward-looking perspective on what matters, and a clear stance. With over 12 years in procurement and supply chain, I lead organizations through the complex challenges of digital transformation.",
+    "paragraph2": "From managing EUR 350M in beverage spend at REWE Group, to leading multi-million euro digital transformation projects at MHP (A Porsche Company) and Accenture Strategy, to serving as interim Head of IT & Professional Services in Procurement for a pharmaceutical sales company with EUR 500M+ spend — I've built deep expertise across the entire Source-to-Pay landscape.",
+    "paragraph3": "As founder of van Laack & partners and co-founder of Sourcera AI, I combine enterprise-grade consulting with cutting-edge AI technology — because the best procurement strategies deserve better tools.",
+    "paragraph4": "With expertise as an entrepreneur, procurement strategist, and AI builder, I stand for authentic sparring that is based on solid values and delivers sustainable results.",
+    "stat1Value": "70B+",
+    "stat1Label": "EUR optimized spend",
+    "stat2Value": "12+",
+    "stat2Label": "Years of experience",
+    "stat3Value": "25+",
+    "stat3Label": "Successful projects",
+    "stat4Value": "20",
+    "stat4Label": "Procurement consultants"
+  },
+  "ventures": {
+    "title": "My Ventures.",
+    "subtitle": "Shaping the future of procurement through consulting and AI technology",
+    "sourcera": {
+      "year": "Founded 2025",
+      "title": "Sourcera AI",
+      "role": "CEO & Founder",
+      "description": "The first end-to-end Opportunity-to-Savings (O2S) platform. Sourcera connects ERPs, Spend Cubes, and S2C platforms into one source of truth, using AI to transform fragmented procurement data into optimized tenders and measurable savings.",
+      "stat1": "10-20% Additional Savings",
+      "stat2": "90% Less Manual Work",
+      "stat3": "10x Faster Execution",
+      "customers": "Trusted by Phoenix Group, Zalando, Tesa",
+      "linkLabel": "sourcera.ai"
+    },
+    "vanLaack": {
+      "year": "Founded 2021",
+      "title": "van Laack & partners",
+      "role": "CEO & Founder",
+      "description": "Procurement transformation and strategy consulting firm specializing in cost-cutting programs, strategic sourcing, and end-to-end supply chain optimization. A team of 20 specialized consultants across Europe serving the world's leading companies — and the hands-on experience that led to founding Sourcera AI.",
+      "stat1": "25+ Projects",
+      "stat2": "22 Partners",
+      "stat3": "20 Consultants",
+      "customers": "Serving Schaeffler, Mercedes-Benz, BASF, Siemens Energy, VW",
+      "linkLabel": "vanlaack-partners.com"
+    }
+  },
+  "timeline": {
+    "title": "Work \u00d7 Life \u00d7\nHigh Performance",
+    "subtitle": "A career that seamlessly connects <highlight>strategic insights, innovation, and practical execution</highlight> — with a clear focus on building future-proof organizations.",
+    "items": {
+      "item1": {
+        "year": "2025",
+        "title": "Sourcera AI",
+        "role": "CEO & Founder",
+        "description": "Co-founded the first end-to-end Opportunity-to-Savings (O2S) platform. Sourcera AI connects ERPs, Spend Cubes, and S2C platforms into a single source of truth — using AI to turn fragmented procurement data into optimized tenders and measurable savings within days, not months."
+      },
+      "item2": {
+        "year": "2024",
+        "title": "Phoenix Group",
+        "role": "Head of IT & Professional Services in Procurement (Interim)",
+        "description": "Interim role reporting to the CPO. Led IT and Professional Services in Procurement with a spend volume exceeding EUR 500M. April 2024 – March 2025."
+      },
+      "item3": {
+        "year": "2021",
+        "title": "van Laack & partners",
+        "role": "Founder & CEO",
+        "description": "Founded a procurement transformation and strategy consulting firm. Built a team of 20 consultants delivering cost-cutting programs and strategic sourcing for leading enterprises — work that ultimately led to the creation of Sourcera AI."
+      },
+      "item4": {
+        "year": "2021",
+        "title": "Global Immersion Seminar",
+        "role": "Harvard Business School & Babson College, Boston",
+        "description": "Intensive executive seminar in Boston exploring entrepreneurship, innovation ecosystems, and global business strategy with sessions at Harvard Business School and Babson College."
+      },
+      "item5": {
+        "year": "2020",
+        "title": "Accenture Strategy",
+        "role": "Manager, Supply Chain & Operations",
+        "description": "Led Zero-Based Strategy (ZBx) evaluations, procurement transformation roadmaps, and cost-cutting programs for Fortune 500 clients. Designed strategic sourcing initiatives, evaluated BPO deals, and built Switch & transformation business cases across complex global organizations."
+      },
+      "item6": {
+        "year": "2019",
+        "title": "HHL Leipzig",
+        "role": "Part-time MBA",
+        "description": "Part-time MBA at HHL Leipzig Graduate School of Management — one of Europe's leading business schools. Focused on strategy, leadership, and entrepreneurship while continuing professional work in procurement consulting."
+      },
+      "item7": {
+        "year": "2017",
+        "title": "MHP – A Porsche Company",
+        "role": "Consultant",
+        "description": "Transformational IT project lead in the automotive industry. Led international SAP MM/SRM rollouts, implemented procurement cloud platforms (Ariba, Fieldglass, Coupa), and managed end-to-end S2P process design for OEMs and tier-1 suppliers."
+      },
+      "item8": {
+        "year": "2017",
+        "title": "REWE Group",
+        "role": "Category Manager",
+        "description": "Managed EUR 350M in beverage procurement spend across 210 suppliers. Built the Spot Buy department from the ground up, establishing processes and team structures for ad-hoc purchasing."
+      },
+      "item9": {
+        "year": "2013",
+        "title": "Hanyang University Seoul",
+        "role": "Business & Marketing",
+        "description": "Studied international business strategy and marketing management at one of South Korea's top universities, gaining cross-cultural trade expertise in the Asian market."
+      },
+      "item10": {
+        "year": "2013",
+        "title": "EUFH Cologne / REWE Group",
+        "role": "BA Trade Management (Dual Studies)",
+        "description": "Awarded IHK 'Besten Ehrung' for outstanding achievement."
+      }
+    }
+  },
+  "expertise": {
+    "title": "Expertise &\nPlatforms.",
+    "cards": {
+      "card1": {
+        "title": "Digital Procurement (S2C & P2P)",
+        "description": "End-to-end Source-to-Contract and Procure-to-Pay implementation — from strategic sourcing and contract lifecycle management to operational purchasing and invoice automation.",
+        "tags": "Ariba, Coupa, Ivalua, Jaggaer, Fieldglass, SAP SRM, GEP"
+      },
+      "card2": {
+        "title": "Procurement Strategy",
+        "description": "Custom procurement strategies, Zero-Based approaches (ZBx), cost-cutting programs, category management frameworks, and make-vs-buy evaluations for complex global organizations.",
+        "tags": "Sievo, PerAngusta, Bonsai, SpendHQ, Market Intelligence, TCO Analysis"
+      },
+      "card3": {
+        "title": "Supply Chain Optimization",
+        "description": "Process optimization, operational excellence, and sustainable procurement across end-to-end supply chains — from demand planning to supplier performance management.",
+        "tags": "SAP S/4, R/3, MM, SRM, Kinaxis, Blue Yonder"
+      },
+      "card4": {
+        "title": "Digital Transformation",
+        "description": "Roadmap design, tool selection, change management, and S4/HANA migrations. Guiding organizations from legacy ERP landscapes to modern, cloud-based procurement ecosystems.",
+        "tags": "SAP S4/HANA, ERP Integration, Cloud Migration, Change Management"
+      },
+      "card5": {
+        "title": "Project & Program Management",
+        "description": "Multi-million EUR project delivery, international rollouts, and cross-functional program governance — from stakeholder alignment to go-live and beyond.",
+        "tags": "Wrike, Jira, Confluence, MS Project, Asana, Monday.com, PMO"
+      },
+      "card6": {
+        "title": "AI & Automation",
+        "description": "AI-powered procurement automation, intelligent spend classification, autonomous sourcing agents, RPA for transactional processes, and process mining for continuous improvement.",
+        "tags": "Python, Sourcera AI, Celonis, UiPath, LLMs, GPT, Claude, Anthropic Certified"
+      }
+    },
+    "certificationsTitle": "Certifications",
+    "certifications": "Coupa, Ariba, Fieldglass (CWF/SOW), Ivalua, Wescale/WPS4"
+  },
+  "zeroUp": {
+    "title": "The Zero-Up\nApproach.",
+    "subtitle": "Our proven methodology that delivers savings from day one — fully funded by us. We only earn when you save.",
+    "phase1": {
+      "title": "Discovery Phase",
+      "duration": "22 Days",
+      "description": "Data-driven opportunity identification. We analyze your processes, org structure, and governance to identify and validate 5+ savings opportunities."
+    },
+    "phase2": {
+      "title": "Execution Phase",
+      "duration": "3 Months",
+      "description": "Tenders launched in Coupa with Sourcera AI. Realize measurable savings to fund transformation while identifying additional opportunities."
+    },
+    "phase3": {
+      "title": "Excellence Phase",
+      "duration": "9 Months",
+      "description": "Define tool landscape and digital roadmap. Streamline data quality, execute process and organizational improvements for sustainable performance."
+    },
+    "scheduleCta": "Schedule a Conversation",
+    "poweredBy": "Powered by van Laack & partners + Sourcera AI"
+  },
+  "projects": {
+    "title": "Selected\nProjects.",
+    "items": {
+      "project1": {
+        "title": "Global Category Management & IT Procurement",
+        "industry": "Pharmaceutical / Pharma Wholesale",
+        "metric": "Spend > EUR 500M",
+        "description": "Interim Head of IT & Professional Services in Procurement, reporting to CPO. Led international team of Category Managers and Shared Service Center. Developed global procurement and cost reduction strategies."
+      },
+      "project2": {
+        "title": "International Ivalua Roll-Out",
+        "industry": "Automotive Supplier",
+        "metric": "Project > EUR 1.4M",
+        "description": "Coordinated all work streams and led end-to-end process design for a global Ivalua implementation."
+      },
+      "project3": {
+        "title": "S4/HANA Implementation",
+        "industry": "Global Battery Manufacturer",
+        "metric": "Project > EUR 3M",
+        "description": "S2P process analysis, implementation roadmap design, requirement workshops with international stakeholders."
+      },
+      "project4": {
+        "title": "Global Coupa Roll-Out",
+        "industry": "Paper & Packaging",
+        "metric": "Project > EUR 1M",
+        "description": "Full S2C & P2P implementation including integration with multiple legacy systems."
+      },
+      "project5": {
+        "title": "ZBx Digital Transformation",
+        "industry": "Chemicals Company",
+        "metric": "Project > EUR 10M",
+        "description": "Zero-Based Strategy evaluation and design of digital transformation procurement roadmap at Accenture Strategy."
+      },
+      "project6": {
+        "title": "Best-of-Breed Procurement Tools",
+        "industry": "Retail Group",
+        "metric": "Project > EUR 8M",
+        "description": "Implementation of Sievo, Bonsai, and PerAngusta for an international building materials retailer."
+      }
+    }
+  },
+  "logos": {
+    "title": "Proof of Brands"
+  },
+  "testimonials": {
+    "title": "Real Experiences.\nReal Results.",
+    "items": {
+      "testimonial1": {
+        "quote": "Excellent consulting with a deep understanding of AI applications in procurement. The implementation was fast, professional, and precisely tailored to our requirements. Highly recommended for companies looking to drive efficiency and innovation in procurement.",
+        "name": "Dirk Thiemann",
+        "role": "CPO, Phoenix Pharma Group",
+        "industry": "Pharma Industry"
+      },
+      "testimonial2": {
+        "quote": "Excellent consulting with a strong strategic understanding of modern procurement processes. The strategy was implemented quickly and seamlessly, significantly contributing to increased efficiency and improved decision making. Highly recommended.",
+        "name": "Jeremy Schwarz",
+        "role": "CEO, Menkdittrich",
+        "industry": "Consulting"
+      },
+      "testimonial3": {
+        "quote": "Van Laack & Partner is truly an outstanding consulting firm with a strong strategic understanding of modern procurement processes. Outstanding in the truest sense of the word, as top-tier, practical implementation is also ensured. With a clear focus on the client and the specific challenges, measurable value is created. Many thanks to the entire team!",
+        "name": "Tim Wisiorek",
+        "role": "Director Procurement, Johnson Controls Automotive Experience",
+        "industry": "Automotive"
+      }
+    }
+  },
+  "trust": {
+    "quote": "I firmly believe that it is the difficult times that show us what we are truly capable of. Together, we find the right path.",
+    "title": "Beyond Business",
+    "paragraph1": "In my consulting work, I repeatedly experience how important trust and interpersonal connections are. Often conversations in challenging projects transcend pure business frameworks, becoming personal and sometimes deeply meaningful.",
+    "paragraph2": "I believe in honesty, respect, and integrity above all else. My approach is pragmatic — straightforward solutions without unnecessary overhead, getting to the point. I'm the kind of person who solves problems for clients rather than creating new ones. That mindset is at the core of everything I do.",
+    "paragraph3": "Listening takes priority — always before analysis. I want to ensure I support clients not just in business matters but also where personal aspects come into play.",
+    "phoneAlt": "Moritz van Laack on the phone in the office",
+    "laughAlt": "Moritz van Laack working and laughing"
+  },
+  "faq": {
+    "title": "Frequently\nAsked\nQuestions.",
+    "items": {
+      "q1": {
+        "question": "What is the Zero-Up Approach?",
+        "answer": "Our proven 3-phase methodology that delivers savings from day one. We start with a fully funded Discovery Phase (22 days) to identify opportunities, move into Execution (3 months) to realize savings with Sourcera AI, and complete with an Excellence Phase (9 months) to embed a sustainable procurement engine. We only earn when you save."
+      },
+      "q2": {
+        "question": "What is Sourcera AI?",
+        "answer": "Sourcera AI is the first end-to-end Opportunity-to-Savings (O2S) platform. It bridges the gap between Spend Cubes and Source-to-Contract tools, using AI to transform fragmented procurement data into optimized tenders and measurable savings. It delivers 10-20% additional savings, 90% less manual work, and 10x faster execution."
+      },
+      "q3": {
+        "question": "What consulting services does van Laack & partners offer?",
+        "answer": "We provide 360-degree supply chain management and procurement consulting with a team of 20 specialized consultants across Europe. Our services include procurement strategy, digital transformation roadmaps, tool implementations (SAP, Coupa, Ivalua, Ariba), interim management, and change management."
+      },
+      "q4": {
+        "question": "What industries do you serve?",
+        "answer": "We work across pharma, retail, logistics, manufacturing, automotive, chemicals, utilities, and packaging. Our clients include Phoenix Group, BASF, Schaeffler, Mercedes-Benz, Volkswagen, Siemens Energy, Zalando, and many more."
+      },
+      "q5": {
+        "question": "What platforms are you certified in?",
+        "answer": "Coupa (Full Suite), SAP Ariba (Full Suite), SAP Fieldglass (CWF/SOW), Ivalua, and Wescale/WPS4. We also have deep expertise in SAP S/4 HANA, Sievo, SpendHQ, Beneering, and 10+ other procurement platforms."
+      },
+      "q6": {
+        "question": "How can we work together?",
+        "answer": "There are several ways: through a Zero-Up engagement (risk-free, fully funded Discovery Phase), traditional consulting and interim management through van Laack & partners, or by implementing Sourcera AI as a SaaS platform. Contact me to discuss which approach fits your needs."
+      }
+    }
+  },
+  "contact": {
+    "title": "Every Major Change\nBegins with a\nConversation.",
+    "subtitle": "Whether you're looking to optimize your procurement, implement new tools, or explore how AI can transform your sourcing — I'd love to connect.",
+    "scheduleCall": "Schedule a Conversation",
+    "sendEmail": "Send an Email"
+  },
+  "footer": {
+    "name": "Moritz van Laack",
+    "tagline": "Procurement expert, entrepreneur, and digital strategist. Building the future of procurement through AI and strategic consulting.",
+    "copyright": "\u00a9 2026 Moritz van Laack. All rights reserved.",
+    "impressum": "Imprint",
+    "datenschutz": "Privacy Policy",
+    "madeInCologne": "Made in Cologne with"
+  },
+  "impressum": {
+    "title": "Imprint",
+    "backToHome": "\u2190 Back to Home",
+    "sectionInfo": "Information pursuant to Sect. 5 German Telemedia Act (TMG)",
+    "name": "Moritz van Laack",
+    "address": "Boisser\u00e9estra\u00dfe 4\n50674 Cologne\nGermany",
+    "sectionContact": "Contact",
+    "email": "Email: info@vanlaack-partners.com",
+    "sectionResponsible": "Person responsible for content pursuant to Sect. 55 para. 2 RStV",
+    "responsibleName": "Moritz van Laack",
+    "responsibleAddress": "Boisser\u00e9estra\u00dfe 4\n50674 Cologne",
+    "sectionLiabilityContent": "Liability for Contents",
+    "liabilityContentText1": "As a service provider, I am liable for my own content on these pages in accordance with Sect. 7 para. 1 of the German Telemedia Act (TMG). However, according to Sect. 8 to 10 TMG, I am not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.",
+    "liabilityContentText2": "Obligations to remove or block the use of information under the general laws remain unaffected. However, liability in this regard is only possible from the time of knowledge of a specific infringement. Upon becoming aware of such violations, I will remove this content immediately.",
+    "sectionLiabilityLinks": "Liability for Links",
+    "liabilityLinksText1": "This website contains links to external websites of third parties whose content I have no influence over. Therefore, I cannot assume any liability for this external content. The respective provider or operator of the linked pages is always responsible for their content. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking.",
+    "liabilityLinksText2": "Permanent content control of the linked pages is not reasonable without concrete evidence of a violation of law. Upon becoming aware of violations, I will remove such links immediately.",
+    "sectionCopyright": "Copyright",
+    "copyrightText1": "The content and works on these pages created by the site operator are subject to German copyright law. Duplication, processing, distribution, and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this page are only permitted for private, non-commercial use.",
+    "copyrightText2": "Insofar as the content on this page was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform me accordingly. Upon becoming aware of violations, I will remove such content immediately."
+  },
+  "datenschutz": {
+    "title": "Privacy Policy",
+    "backToHome": "\u2190 Back to Home",
+    "section1Title": "1. Privacy at a Glance",
+    "section1Text": "The protection of your personal data is important to us. This website uses no cookies, no tracking tools, and no analytics software. Data is only collected when you actively provide it to us.",
+    "section2Title": "2. General Information and Mandatory Disclosures",
+    "responsiblePartyTitle": "Responsible Party",
+    "responsiblePartyText": "Moritz van Laack\nBoisser\u00e9estra\u00dfe 4\n50674 Cologne\nGermany\nEmail: info@vanlaack-partners.com",
+    "responsiblePartyNote": "The responsible party is the natural person who alone or jointly with others decides on the purposes and means of processing personal data.",
+    "yourRightsTitle": "Your Rights",
+    "yourRightsText": "You have the right at any time to obtain free information about the origin, recipient, and purpose of your stored personal data. You also have the right to request the correction, blocking, or deletion of this data. You can contact us at any time regarding this and other questions on the subject of data protection.",
+    "yourRightsText2": "Furthermore, you have the right to lodge a complaint with the competent supervisory authority.",
+    "section3Title": "3. Data Collection on This Website",
+    "localStorageTitle": "localStorage",
+    "localStorageText": "This website uses your browser's localStorage exclusively to store your language preference and theme setting (light/dark mode). This data is stored locally in your browser and is not transmitted to us.",
+    "serverLogsTitle": "Server Log Files",
+    "serverLogsText": "The hosting provider automatically collects and stores information in server log files that your browser transmits. This minimal technical data is temporarily retained for security reasons, not analyzed, and automatically deleted.",
+    "section4Title": "4. Cookies",
+    "section4Text": "This website uses no cookies, no tracking tools, and no analytics software.",
+    "section5Title": "5. Your Rights as a Data Subject (GDPR)",
+    "section5Intro": "Under the General Data Protection Regulation (GDPR), you have the following rights:",
+    "rightAccess": "Right of access (Art. 15 GDPR): You have the right to obtain information about your personal data processed by us.",
+    "rightRectification": "Right to rectification (Art. 16 GDPR): You have the right to request immediate correction of inaccurate personal data or completion of incomplete data stored by us.",
+    "rightErasure": "Right to erasure (Art. 17 GDPR): You have the right to request the deletion of your personal data stored by us, unless processing is necessary for exercising the right of freedom of expression and information, for compliance with a legal obligation, or for reasons of public interest.",
+    "rightRestriction": "Right to restriction of processing (Art. 18 GDPR): You have the right to request the restriction of the processing of your personal data.",
+    "rightPortability": "Right to data portability (Art. 20 GDPR): You have the right to receive your personal data in a structured, commonly used, and machine-readable format, or to request the transfer to another controller.",
+    "rightObjection": "Right to object (Art. 21 GDPR): You have the right to object at any time to the processing of your personal data."
+  }
+}

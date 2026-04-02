@@ -15,14 +15,17 @@
     "headline2": "EUR 70 Mrd.+ an optimiertem Einkaufsvolumen",
     "headline3": "Vom Category Management zur KI-gestützten Beschaffung",
     "subtitle": "Ich entwickle Beschaffungsstrategien, Teams und Technologien, die messbare Ergebnisse liefern.",
-    "cta": "Gespräch vereinbaren"
+    "cta": "Gespräch vereinbaren",
+    "imageAlt": "Moritz van Laack bei einer Keynote auf der Bühne"
   },
   "about": {
-    "title": "Über mich",
+    "title": "Die Zukunft gestalten,\nnicht nur reagieren.",
     "photoAlt": "Moritz van Laack",
-    "paragraph1": "Als Einkaufsexperte und Unternehmer mit Sitz in Köln transformiere ich seit über 12 Jahren die Art und Weise, wie Unternehmen einkaufen. Von der Steuerung eines Einkaufsvolumens von EUR 350 Mio. im Getränkebereich bei der REWE Group über die Leitung digitaler Transformationsprojekte im Millionenbereich bei MHP (A Porsche Company) und Accenture Strategy habe ich umfassende Expertise über die gesamte Source-to-Pay-Landschaft aufgebaut.",
-    "paragraph2": "2021 habe ich van Laack & partners gegründet, um erstklassige Einkaufsberatung für ambitionierte Organisationen anzubieten. 2025 habe ich Sourcera AI mitgegründet, um das zu automatisieren, was ich ein Jahrzehnt lang manuell gemacht habe — weil die besten Einkaufsstrategien bessere Werkzeuge verdienen.",
-    "paragraph3": "Ich habe einen MBA der HHL Leipzig Graduate School of Management und einen BA in Handelsmanagement. Ich spreche Deutsch und Englisch und habe an der Hanyang University Seoul und der Ballard High School Seattle studiert.",
+    "scheduleCta": "Gespräch vereinbaren",
+    "paragraph1": "Strategie, ein vorausschauender Blick auf das Wesentliche und eine klare Haltung. Mit über 12 Jahren Erfahrung in Einkauf und Supply Chain führe ich Organisationen durch die komplexen Herausforderungen der digitalen Transformation.",
+    "paragraph2": "Von der Steuerung eines Einkaufsvolumens von EUR 350 Mio. im Getränkebereich bei der REWE Group über die Leitung digitaler Transformationsprojekte im Millionenbereich bei MHP (A Porsche Company) und Accenture Strategy bis hin zur Rolle als Interim Head of IT & Professional Services im Einkauf eines Pharma-Großhändlers mit EUR 500 Mio.+ Einkaufsvolumen — ich habe umfassende Expertise über die gesamte Source-to-Pay-Landschaft aufgebaut.",
+    "paragraph3": "Als Gründer von van Laack & partners und Mitgründer von Sourcera AI verbinde ich erstklassige Beratung mit modernster KI-Technologie — weil die besten Einkaufsstrategien bessere Werkzeuge verdienen.",
+    "paragraph4": "Mit Expertise als Unternehmer, Einkaufsstratege und KI-Entwickler stehe ich für authentisches Sparring, das auf soliden Werten basiert und nachhaltige Ergebnisse liefert.",
     "stat1Value": "70 Mrd.+",
     "stat1Label": "EUR optimiertes Volumen",
     "stat2Value": "12+",
@@ -33,7 +36,7 @@
     "stat4Label": "Einkaufsberater"
   },
   "ventures": {
-    "title": "Meine Unternehmen",
+    "title": "Meine Unternehmen.",
     "subtitle": "Die Zukunft des Einkaufs durch Beratung und KI-Technologie gestalten",
     "sourcera": {
       "year": "Gegründet 2025",
@@ -44,7 +47,7 @@
       "stat2": "90% weniger Handarbeit",
       "stat3": "10x schnellere Umsetzung",
       "customers": "Vertraut von Phoenix Group, Zalando, Tesa",
-      "link": "Zu sourcera.ai"
+      "linkLabel": "Zu sourcera.ai"
     },
     "vanLaack": {
       "year": "Gegründet 2021",
@@ -55,103 +58,114 @@
       "stat2": "22 Partner",
       "stat3": "20 Berater",
       "customers": "Für Schaeffler, Mercedes-Benz, BASF, Siemens Energy, VW",
-      "link": "Zu vanlaack-partners.com"
+      "linkLabel": "Zu vanlaack-partners.com"
     }
   },
   "timeline": {
-    "title": "Werdegang",
-    "subtitle": "Vom operativen Category Management über C-Level-Strategieberatung zum Unternehmertum",
-    "educationTitle": "Ausbildung",
+    "title": "Arbeit × Leben ×\nHigh Performance",
+    "subtitle": "Eine Karriere, die <highlight>strategische Einblicke, Innovation und praktische Umsetzung</highlight> nahtlos verbindet — mit klarem Fokus auf zukunftsfähige Organisationen.",
     "items": {
       "item1": {
         "year": "2025",
-        "role": "Gründer & Geschäftsführer",
-        "company": "Sourcera AI",
-        "description": "KI-Beschaffungsplattform mitgegründet mit Andreas Eiselt. Aufbau der ersten End-to-End O2S-Lösung."
+        "title": "Sourcera AI",
+        "role": "CEO & Gründer",
+        "description": "KI-Beschaffungsplattform mitgegründet. Aufbau der ersten End-to-End O2S-Lösung, die ERPs, Spend Cubes und S2C-Plattformen verbindet — mit KI, um fragmentierte Einkaufsdaten in optimierte Ausschreibungen und messbare Einsparungen zu verwandeln."
       },
       "item2": {
-        "year": "2021–Heute",
-        "role": "Gründer & CEO",
-        "company": "van Laack & partners",
-        "description": "Team von 20 Einkaufsberatern aufgebaut. Leitung von Projekten wie Interim Head of Global Category Management für einen Pharma-Großhändler mit EUR 500 Mio.+ Einkaufsvolumen."
+        "year": "2024",
+        "title": "Phoenix Group",
+        "role": "Head of IT & Professional Services im Einkauf (Interim)",
+        "description": "Interim-Rolle mit Berichtslinie an den CPO. Leitung von IT und Professional Services im Einkauf mit einem Volumen von über EUR 500 Mio. April 2024 – März 2025."
       },
       "item3": {
-        "year": "2020–2021",
-        "role": "Manager, Supply Chain & Operations",
-        "company": "Accenture Strategy",
-        "description": "Leitung von Zero-Based Strategy Evaluierungen, digitalen Transformations-Roadmaps und Best-of-Breed Tool-Implementierungen für Fortune 500 Kunden. Projektvolumen über EUR 10 Mio."
+        "year": "2021",
+        "title": "van Laack & partners",
+        "role": "Gründer & CEO",
+        "description": "Gründung einer Einkaufstransformations- und Strategieberatung. Aufbau eines Teams von 20 Beratern für Kostenreduktionsprogramme und strategischen Einkauf — die Praxiserfahrung, die zur Gründung von Sourcera AI führte."
       },
       "item4": {
-        "year": "2019–2020",
-        "role": "Senior Consultant, Digital SCM",
-        "company": "MHP – A Porsche Company",
-        "description": "IT-Projektleitung für internationale SAP MM Rollouts, SAP Ariba und Fieldglass Implementierungen sowie RPA & KI Beschaffungsautomatisierung."
+        "year": "2021",
+        "title": "Global Immersion Seminar",
+        "role": "Harvard Business School & Babson College, Boston",
+        "description": "Intensives Executive-Seminar in Boston zu Unternehmertum, Innovationsökosystemen und globaler Geschäftsstrategie mit Sessions an der Harvard Business School und dem Babson College."
       },
       "item5": {
-        "year": "2017–2018",
-        "role": "Consultant, Digital SCM",
-        "company": "MHP – A Porsche Company",
-        "description": "Einstieg in die Einkaufs-Technologieberatung. Erste Plattform-Implementierungen."
+        "year": "2020",
+        "title": "Accenture Strategy",
+        "role": "Manager, Supply Chain & Operations",
+        "description": "Leitung von Zero-Based Strategy (ZBx) Evaluierungen, Beschaffungstransformations-Roadmaps und Kostenreduktionsprogrammen für Fortune-500-Kunden. Entwicklung strategischer Sourcing-Initiativen und Transformations-Business-Cases."
       },
       "item6": {
-        "year": "2017",
-        "role": "Category Manager",
-        "company": "REWE Group",
-        "description": "Steuerung von EUR 350 Mio. Einkaufsvolumen im Getränkebereich über 210 Lieferanten."
+        "year": "2019",
+        "title": "HHL Leipzig",
+        "role": "Berufsbegleitender MBA",
+        "description": "Berufsbegleitender MBA an der HHL Leipzig Graduate School of Management — eine der führenden Business Schools Europas. Fokus auf Strategie, Leadership und Unternehmertum."
       },
       "item7": {
-        "year": "2013–2016",
-        "role": "Dualer Student",
-        "company": "REWE Group / EUFH Köln",
-        "description": "BA in Handelsmanagement. Ausgezeichnet mit der IHK ‚Besten Ehrung' für herausragende Leistungen."
+        "year": "2017",
+        "title": "MHP – A Porsche Company",
+        "role": "Consultant",
+        "description": "Transformative IT-Projektleitung in der Automobilindustrie. Leitung internationaler SAP MM/SRM Rollouts, Implementierung von Cloud-Plattformen (Ariba, Fieldglass, Coupa) und End-to-End S2P-Prozessdesign."
+      },
+      "item8": {
+        "year": "2017",
+        "title": "REWE Group",
+        "role": "Category Manager",
+        "description": "Steuerung von EUR 350 Mio. Einkaufsvolumen im Getränkebereich über 210 Lieferanten. Aufbau der Spot-Buy-Abteilung von Grund auf."
+      },
+      "item9": {
+        "year": "2013",
+        "title": "Hanyang University Seoul",
+        "role": "Business & Marketing",
+        "description": "Studium internationaler Geschäftsstrategie und Marketing-Management an einer der führenden Universitäten Südkoreas."
+      },
+      "item10": {
+        "year": "2013",
+        "title": "EUFH Köln / REWE Group",
+        "role": "BA Handelsmanagement (Duales Studium)",
+        "description": "Ausgezeichnet mit der IHK 'Besten Ehrung' für herausragende Leistungen."
       }
-    },
-    "education": {
-      "edu1": { "degree": "MBA", "school": "HHL Leipzig", "years": "2019–2021" },
-      "edu2": { "degree": "Austausch", "school": "Hanyang Seoul", "years": "2016" },
-      "edu3": { "degree": "BA", "school": "EUFH Köln", "years": "2013–2016" },
-      "edu4": { "degree": "Austausch", "school": "Ballard HS Seattle", "years": "2010–2011" }
     }
   },
   "expertise": {
-    "title": "Expertise & Plattformen",
+    "title": "Expertise &\nPlattformen.",
     "cards": {
       "card1": {
         "title": "Digitaler Einkauf (S2C & P2P)",
-        "description": "End-to-End Source-to-Contract und Procure-to-Pay Implementierung",
-        "tags": "Ariba, Coupa, Ivalua, Jaggaer, Fieldglass"
+        "description": "End-to-End Source-to-Contract und Procure-to-Pay Implementierung — von strategischem Sourcing und Vertragsmanagement bis hin zu operativem Einkauf und Rechnungsautomatisierung.",
+        "tags": "Ariba, Coupa, Ivalua, Jaggaer, Fieldglass, SAP SRM, GEP"
       },
       "card2": {
         "title": "Einkaufsstrategie",
-        "description": "Individuelle Einkaufsstrategien, Kostenreduktion und Zero-Based-Ansätze",
-        "tags": "Sievo, PerAngusta, Bonsai"
+        "description": "Individuelle Einkaufsstrategien, Zero-Based-Ansätze (ZBx), Kostenreduktionsprogramme, Category-Management-Frameworks und Make-vs-Buy-Evaluierungen.",
+        "tags": "Sievo, PerAngusta, Bonsai, SpendHQ, Market Intelligence, TCO-Analyse"
       },
       "card3": {
         "title": "Supply Chain Optimierung",
-        "description": "Prozessoptimierung, Operational Excellence und nachhaltige Beschaffung",
-        "tags": "SAP S/4, R/3, MM, SRM"
+        "description": "Prozessoptimierung, Operational Excellence und nachhaltige Beschaffung über die gesamte Lieferkette — von Bedarfsplanung bis Lieferanten-Performance-Management.",
+        "tags": "SAP S/4, R/3, MM, SRM, Kinaxis, Blue Yonder"
       },
       "card4": {
         "title": "Digitale Transformation",
-        "description": "Roadmap-Design, Tool-Auswahl, Change Management und S4/HANA-Migrationen",
-        "tags": "SAP S4/HANA, ERP Integration"
+        "description": "Roadmap-Design, Tool-Auswahl, Change Management und S4/HANA-Migrationen. Begleitung von Organisationen vom Legacy-ERP zu modernen Cloud-basierten Einkaufsökosystemen.",
+        "tags": "SAP S4/HANA, ERP Integration, Cloud Migration, Change Management"
       },
       "card5": {
         "title": "Projekt- & Programm-Management",
-        "description": "Durchführung von Projekten im Millionenbereich und globale Rollouts über Branchen hinweg",
-        "tags": "Wrike, Jira, Confluence"
+        "description": "Durchführung von Projekten im Millionenbereich, internationale Rollouts und funktionsübergreifende Programm-Governance.",
+        "tags": "Wrike, Jira, Confluence, MS Project, Asana, Monday.com, PMO"
       },
       "card6": {
         "title": "KI & Automatisierung",
-        "description": "RPA, KI-gestützte Beschaffungsautomatisierung und Process Mining",
-        "tags": "Python, Sourcera AI"
+        "description": "KI-gestützte Einkaufsautomatisierung, intelligente Ausgabenklassifizierung, autonome Sourcing-Agenten, RPA und Process Mining für kontinuierliche Verbesserung.",
+        "tags": "Python, Sourcera AI, Celonis, UiPath, LLMs, GPT, Claude, Anthropic Certified"
       }
     },
     "certificationsTitle": "Zertifizierungen",
     "certifications": "Coupa, Ariba, Fieldglass (CWF/SOW), Ivalua, Wescale/WPS4"
   },
   "zeroUp": {
-    "title": "Der Zero-Up Ansatz",
+    "title": "Der Zero-Up\nAnsatz.",
     "subtitle": "Unsere bewährte Methodik, die ab Tag eins Einsparungen liefert — vollständig von uns finanziert. Wir verdienen nur, wenn Sie sparen.",
     "phase1": {
       "title": "Discovery Phase",
@@ -168,16 +182,17 @@
       "duration": "9 Monate",
       "description": "Definition der Tool-Landschaft und digitalen Roadmap. Optimierung der Datenqualität, Umsetzung von Prozess- und Organisationsverbesserungen für nachhaltige Performance."
     },
+    "scheduleCta": "Gespräch vereinbaren",
     "poweredBy": "Powered by van Laack & partners + Sourcera AI"
   },
   "projects": {
-    "title": "Ausgewählte Projekte",
+    "title": "Ausgewählte\nProjekte.",
     "items": {
       "project1": {
-        "title": "Globales Category Management",
-        "industry": "Pharma-Großhändler",
+        "title": "Globales Category Management & IT Einkauf",
+        "industry": "Pharma / Pharma-Großhandel",
         "metric": "Volumen > EUR 500 Mio.",
-        "description": "Leitung eines internationalen Teams von Category Managern und Shared Service Center. Entwicklung globaler Einkaufs- und Kostenreduktionsstrategien."
+        "description": "Interim Head of IT & Professional Services im Einkauf, Berichtslinie an CPO. Leitung eines internationalen Teams von Category Managern und Shared Service Center. Entwicklung globaler Einkaufs- und Kostenreduktionsstrategien."
       },
       "project2": {
         "title": "Internationaler Ivalua Roll-Out",
@@ -212,26 +227,42 @@
     }
   },
   "logos": {
-    "trustedBy": "Vertraut von",
-    "partnerNetwork": "Partnernetzwerk"
+    "title": "Proof of Brands"
   },
   "testimonials": {
-    "title": "Was Entscheider sagen",
+    "title": "Echte Erfahrungen.\nEchte Ergebnisse.",
     "items": {
       "testimonial1": {
-        "quote": "Sourcera.ai zeigt uns, wie Einkaufseffizienz skalieren kann. Was früher Monate manueller Arbeit erforderte, wird jetzt in Tagen generiert. Das ist ein potenzieller Game Changer für große und komplexe Organisationen wie unsere.",
+        "quote": "Hervorragende Beratung mit tiefem Verständnis für KI-Anwendungen im Einkauf. Die Implementierung war schnell, professionell und genau auf unsere Anforderungen zugeschnitten. Sehr empfehlenswert für Unternehmen, die Effizienz und Innovation im Einkauf vorantreiben wollen.",
         "name": "Dirk Thiemann",
-        "role": "CPO, Phoenix Group"
+        "role": "CPO, Phoenix Pharma Group",
+        "industry": "Pharma-Industrie"
       },
       "testimonial2": {
-        "quote": "Sourcera.ai hilft uns, Daten innerhalb von Tagen in Sourcing-Maßnahmen umzuwandeln. Wir können Ausgaben schnell reklassifizieren, Überschneidungen erkennen und Initiativen starten, die messbare Einsparungen liefern, während unsere Teams sich auf strategische Entscheidungen statt repetitiver Aufgaben konzentrieren können.",
-        "name": "Alejandro Basterrechea",
-        "role": "CPO, Zalando"
+        "quote": "Hervorragende Beratung mit einem starken strategischen Verständnis moderner Einkaufsprozesse. Die Strategie wurde schnell und nahtlos umgesetzt und trug wesentlich zur Steigerung der Effizienz und Verbesserung der Entscheidungsfindung bei. Sehr empfehlenswert.",
+        "name": "Jeremy Schwarz",
+        "role": "CEO, Menkdittrich",
+        "industry": "Beratung"
+      },
+      "testimonial3": {
+        "quote": "Van Laack & Partner ist wirklich eine herausragende Beratungsfirma mit starkem strategischen Verständnis moderner Einkaufsprozesse. Herausragend im wahrsten Sinne des Wortes, da auch eine erstklassige, praxisnahe Umsetzung sichergestellt wird. Mit klarem Fokus auf den Kunden und die spezifischen Herausforderungen wird messbarer Mehrwert geschaffen. Vielen Dank an das gesamte Team!",
+        "name": "Tim Wisiorek",
+        "role": "Director Procurement, Johnson Controls Automotive Experience",
+        "industry": "Automobil"
       }
     }
   },
+  "trust": {
+    "quote": "Ich bin fest davon überzeugt, dass es die schwierigen Zeiten sind, die uns zeigen, wozu wir wirklich fähig sind. Gemeinsam finden wir den richtigen Weg.",
+    "title": "Über das Geschäftliche hinaus",
+    "paragraph1": "In meiner Beratungsarbeit erlebe ich immer wieder, wie wichtig Vertrauen und zwischenmenschliche Verbindungen sind. Oft gehen Gespräche in herausfordernden Projekten über rein geschäftliche Rahmenbedingungen hinaus, werden persönlich und manchmal zutiefst bedeutsam.",
+    "paragraph2": "Ich glaube an Ehrlichkeit, Respekt und Integrität über alles andere. Mein Ansatz ist pragmatisch — geradlinige Lösungen ohne unnötigen Overhead, auf den Punkt gebracht. Ich bin der Typ, der Probleme für Kunden löst, statt neue zu schaffen. Diese Denkweise steht im Mittelpunkt von allem, was ich tue.",
+    "paragraph3": "Zuhören hat Vorrang — immer vor der Analyse. Ich möchte sicherstellen, dass ich Kunden nicht nur in geschäftlichen Angelegenheiten unterstütze, sondern auch dort, wo persönliche Aspekte eine Rolle spielen.",
+    "phoneAlt": "Moritz van Laack am Telefon im Büro",
+    "laughAlt": "Moritz van Laack bei der Arbeit und lachend"
+  },
   "faq": {
-    "title": "Häufig gestellte Fragen",
+    "title": "Häufig\nGestellte\nFragen.",
     "items": {
       "q1": {
         "question": "Was ist der Zero-Up Ansatz?",
@@ -260,7 +291,7 @@
     }
   },
   "contact": {
-    "title": "Lassen Sie uns die Zukunft des Einkaufs gemeinsam gestalten",
+    "title": "Jede große Veränderung\nbeginnt mit einem\nGespräch.",
     "subtitle": "Ob Sie Ihren Einkauf optimieren, neue Tools implementieren oder erkunden möchten, wie KI Ihr Sourcing transformieren kann — ich freue mich auf den Austausch.",
     "scheduleCall": "Gespräch vereinbaren",
     "sendEmail": "E-Mail senden"
@@ -272,5 +303,54 @@
     "impressum": "Impressum",
     "datenschutz": "Datenschutz",
     "madeInCologne": "Made in Cologne mit"
+  },
+  "impressum": {
+    "title": "Impressum",
+    "backToHome": "← Zurück zur Startseite",
+    "sectionInfo": "Angaben gemäß § 5 TMG",
+    "name": "Moritz van Laack",
+    "address": "Boisseréestraße 4\n50674 Köln\nDeutschland",
+    "sectionContact": "Kontakt",
+    "email": "E-Mail: info@vanlaack-partners.com",
+    "sectionResponsible": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
+    "responsibleName": "Moritz van Laack",
+    "responsibleAddress": "Boisseréestraße 4\n50674 Köln",
+    "sectionLiabilityContent": "Haftung für Inhalte",
+    "liabilityContentText1": "Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.",
+    "liabilityContentText2": "Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich diese Inhalte umgehend entfernen.",
+    "sectionLiabilityLinks": "Haftung für Links",
+    "liabilityLinksText1": "Dieses Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.",
+    "liabilityLinksText2": "Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen.",
+    "sectionCopyright": "Urheberrecht",
+    "copyrightText1": "Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.",
+    "copyrightText2": "Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Inhalte umgehend entfernen."
+  },
+  "datenschutz": {
+    "title": "Datenschutzerklärung",
+    "backToHome": "← Zurück zur Startseite",
+    "section1Title": "1. Datenschutz auf einen Blick",
+    "section1Text": "Der Schutz Ihrer personenbezogenen Daten ist uns ein wichtiges Anliegen. Diese Website verwendet keine Cookies, keine Tracking-Tools und keine Analysesoftware. Daten werden nur dann erhoben, wenn Sie uns diese aktiv zur Verfügung stellen.",
+    "section2Title": "2. Allgemeine Hinweise und Pflichtinformationen",
+    "responsiblePartyTitle": "Verantwortliche Stelle",
+    "responsiblePartyText": "Moritz van Laack\nBoisseréestraße 4\n50674 Köln\nDeutschland\nE-Mail: info@vanlaack-partners.com",
+    "responsiblePartyNote": "Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.",
+    "yourRightsTitle": "Ihre Rechte",
+    "yourRightsText": "Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.",
+    "yourRightsText2": "Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.",
+    "section3Title": "3. Datenerfassung auf dieser Website",
+    "localStorageTitle": "localStorage",
+    "localStorageText": "Diese Website nutzt den localStorage Ihres Browsers ausschließlich zur Speicherung Ihrer Sprachpräferenz und Theme-Einstellung (Hell-/Dunkelmodus). Diese Daten werden lokal in Ihrem Browser gespeichert und nicht an uns übermittelt.",
+    "serverLogsTitle": "Server-Log-Dateien",
+    "serverLogsText": "Der Provider der Seiten erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Diese minimalen technischen Daten werden temporär aus Sicherheitsgründen aufbewahrt, nicht analysiert und automatisch gelöscht.",
+    "section4Title": "4. Cookies",
+    "section4Text": "Diese Website verwendet keine Cookies, keine Tracking-Tools und keine Analysesoftware.",
+    "section5Title": "5. Ihre Rechte als betroffene Person (DSGVO)",
+    "section5Intro": "Gemäß der Datenschutz-Grundverordnung (DSGVO) stehen Ihnen folgende Rechte zu:",
+    "rightAccess": "Auskunftsrecht (Art. 15 DSGVO): Sie haben das Recht, Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten zu verlangen.",
+    "rightRectification": "Recht auf Berichtigung (Art. 16 DSGVO): Sie haben das Recht, unverzüglich die Berichtigung unrichtiger oder Vervollständigung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen.",
+    "rightErasure": "Recht auf Löschung (Art. 17 DSGVO): Sie haben das Recht, die Löschung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen, soweit nicht die Verarbeitung zur Ausübung des Rechts auf freie Meinungsäußerung und Information, zur Erfüllung einer rechtlichen Verpflichtung oder aus Gründen des öffentlichen Interesses erforderlich ist.",
+    "rightRestriction": "Recht auf Einschränkung (Art. 18 DSGVO): Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.",
+    "rightPortability": "Recht auf Datenübertragbarkeit (Art. 20 DSGVO): Sie haben das Recht, Ihre personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder die Übermittlung an einen anderen Verantwortlichen zu verlangen.",
+    "rightObjection": "Widerspruchsrecht (Art. 21 DSGVO): Sie haben das Recht, jederzeit gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen."
   }
 }

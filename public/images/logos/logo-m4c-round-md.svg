@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Medium overlap — medium radius (16px) rounded corners -->
+  <!-- Left triangle -->
+  <path d="
+    M 15,31 L 15,169
+    Q 15,185 31,185
+    L 109,185
+    Q 131,185 121,167
+    L 31,16
+    Q 15,15 15,31
+    Z
+  " fill="#8b5cf6" opacity="0.7"/>
+  <!-- Right triangle -->
+  <path d="
+    M 185,31 L 185,169
+    Q 185,185 169,185
+    L 91,185
+    Q 69,185 79,167
+    L 169,16
+    Q 185,15 185,31
+    Z
+  " fill="#8b5cf6" opacity="0.7"/>
+</svg>

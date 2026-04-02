@@ -1,6 +1,6 @@
+import JsonLd from "@/components/JsonLd";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
-import LogoCarousel from "@/components/LogoCarousel";
 import AboutSection from "@/components/AboutSection";
 import VenturesSection from "@/components/VenturesSection";
 import TimelineSection from "@/components/TimelineSection";
@@ -12,14 +12,15 @@ import TrustSection from "@/components/TrustSection";
 import FAQSection from "@/components/FAQSection";
 import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
-
+import ParallaxLines from "@/components/ParallaxLines";
 export default function Home() {
   return (
     <>
+      <JsonLd />
       <Navigation />
+      <ParallaxLines />
       <main>
         <HeroSection />
-        <LogoCarousel />
         <AboutSection />
         <VenturesSection />
         <TimelineSection />
