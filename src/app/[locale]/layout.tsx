@@ -5,6 +5,10 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import ThemeProvider from "@/components/ThemeProvider";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import CookieConsent from "@/components/CookieConsent";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -64,8 +68,12 @@ export default async function LocaleLayout({ children, params }: Props) {
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
             {children}
+            <CookieConsent />
+            <GoogleAnalytics />
           </NextIntlClientProvider>
         </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -325,11 +325,17 @@
     "copyrightText1": "The content and works on these pages created by the site operator are subject to German copyright law. Duplication, processing, distribution, and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this page are only permitted for private, non-commercial use.",
     "copyrightText2": "Insofar as the content on this page was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform me accordingly. Upon becoming aware of violations, I will remove such content immediately."
   },
+  "cookieConsent": {
+    "message": "We use cookies to analyze site traffic and optimize your experience. You can accept or decline optional analytics cookies.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "learnMore": "Learn more"
+  },
   "datenschutz": {
     "title": "Privacy Policy",
     "backToHome": "\u2190 Back to Home",
     "section1Title": "1. Privacy at a Glance",
-    "section1Text": "The protection of your personal data is important to us. This website uses no cookies, no tracking tools, and no analytics software. Data is only collected when you actively provide it to us.",
+    "section1Text": "The protection of your personal data is important to us. This website uses Vercel Analytics to collect anonymous, aggregated usage data without cookies. If you consent, we also use Google Analytics 4 to gain deeper insights into how our site is used. You can decline analytics cookies at any time.",
     "section2Title": "2. General Information and Mandatory Disclosures",
     "responsiblePartyTitle": "Responsible Party",
     "responsiblePartyText": "Moritz van Laack\nBoisser\u00e9estra\u00dfe 4\n50674 Cologne\nGermany\nEmail: info@vanlaack-partners.com",
@@ -339,11 +345,11 @@
     "yourRightsText2": "Furthermore, you have the right to lodge a complaint with the competent supervisory authority.",
     "section3Title": "3. Data Collection on This Website",
     "localStorageTitle": "localStorage",
-    "localStorageText": "This website uses your browser's localStorage exclusively to store your language preference and theme setting (light/dark mode). This data is stored locally in your browser and is not transmitted to us.",
+    "localStorageText": "This website uses your browser's localStorage to store your language preference, theme setting (light/dark mode), and cookie consent choice. This data is stored locally in your browser and is not transmitted to us.",
     "serverLogsTitle": "Server Log Files",
     "serverLogsText": "The hosting provider automatically collects and stores information in server log files that your browser transmits. This minimal technical data is temporarily retained for security reasons, not analyzed, and automatically deleted.",
     "section4Title": "4. Cookies",
-    "section4Text": "This website uses no cookies, no tracking tools, and no analytics software.",
+    "section4Text": "This website uses Vercel Analytics, a privacy-friendly analytics service that collects anonymous, aggregated data without setting any cookies. Additionally, if you give your consent via the cookie banner, Google Analytics 4 (GA4) is loaded. GA4 sets cookies (such as _ga and _ga_*) to distinguish unique users and analyze site usage. These cookies are only set after you explicitly accept them. You can withdraw your consent at any time by clearing your browser's localStorage. If you decline, no analytics cookies are set and GA4 is not loaded.",
     "section5Title": "5. Your Rights as a Data Subject (GDPR)",
     "section5Intro": "Under the General Data Protection Regulation (GDPR), you have the following rights:",
     "rightAccess": "Right of access (Art. 15 GDPR): You have the right to obtain information about your personal data processed by us.",

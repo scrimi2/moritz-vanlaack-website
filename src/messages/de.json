@@ -325,11 +325,17 @@
     "copyrightText1": "Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.",
     "copyrightText2": "Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Inhalte umgehend entfernen."
   },
+  "cookieConsent": {
+    "message": "Wir verwenden Cookies, um den Website-Traffic zu analysieren und Ihr Erlebnis zu optimieren. Sie können optionale Analyse-Cookies akzeptieren oder ablehnen.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen",
+    "learnMore": "Mehr erfahren"
+  },
   "datenschutz": {
     "title": "Datenschutzerklärung",
     "backToHome": "← Zurück zur Startseite",
     "section1Title": "1. Datenschutz auf einen Blick",
-    "section1Text": "Der Schutz Ihrer personenbezogenen Daten ist uns ein wichtiges Anliegen. Diese Website verwendet keine Cookies, keine Tracking-Tools und keine Analysesoftware. Daten werden nur dann erhoben, wenn Sie uns diese aktiv zur Verfügung stellen.",
+    "section1Text": "Der Schutz Ihrer personenbezogenen Daten ist uns ein wichtiges Anliegen. Diese Website verwendet Vercel Analytics zur Erfassung anonymer, aggregierter Nutzungsdaten ohne Cookies. Mit Ihrer Zustimmung setzen wir zusätzlich Google Analytics 4 ein, um tiefere Einblicke in die Nutzung unserer Website zu gewinnen. Sie können Analyse-Cookies jederzeit ablehnen.",
     "section2Title": "2. Allgemeine Hinweise und Pflichtinformationen",
     "responsiblePartyTitle": "Verantwortliche Stelle",
     "responsiblePartyText": "Moritz van Laack\nBoisseréestraße 4\n50674 Köln\nDeutschland\nE-Mail: info@vanlaack-partners.com",
@@ -339,11 +345,11 @@
     "yourRightsText2": "Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.",
     "section3Title": "3. Datenerfassung auf dieser Website",
     "localStorageTitle": "localStorage",
-    "localStorageText": "Diese Website nutzt den localStorage Ihres Browsers ausschließlich zur Speicherung Ihrer Sprachpräferenz und Theme-Einstellung (Hell-/Dunkelmodus). Diese Daten werden lokal in Ihrem Browser gespeichert und nicht an uns übermittelt.",
+    "localStorageText": "Diese Website nutzt den localStorage Ihres Browsers zur Speicherung Ihrer Sprachpräferenz, Theme-Einstellung (Hell-/Dunkelmodus) und Cookie-Einwilligung. Diese Daten werden lokal in Ihrem Browser gespeichert und nicht an uns übermittelt.",
     "serverLogsTitle": "Server-Log-Dateien",
     "serverLogsText": "Der Provider der Seiten erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Diese minimalen technischen Daten werden temporär aus Sicherheitsgründen aufbewahrt, nicht analysiert und automatisch gelöscht.",
     "section4Title": "4. Cookies",
-    "section4Text": "Diese Website verwendet keine Cookies, keine Tracking-Tools und keine Analysesoftware.",
+    "section4Text": "Diese Website verwendet Vercel Analytics, einen datenschutzfreundlichen Analysedienst, der anonyme, aggregierte Daten ohne das Setzen von Cookies erfasst. Zusätzlich wird, sofern Sie über das Cookie-Banner Ihre Einwilligung erteilen, Google Analytics 4 (GA4) geladen. GA4 setzt Cookies (wie _ga und _ga_*), um einzelne Nutzer zu unterscheiden und die Website-Nutzung zu analysieren. Diese Cookies werden nur nach Ihrer ausdrücklichen Zustimmung gesetzt. Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie den localStorage Ihres Browsers löschen. Wenn Sie ablehnen, werden keine Analyse-Cookies gesetzt und GA4 wird nicht geladen.",
     "section5Title": "5. Ihre Rechte als betroffene Person (DSGVO)",
     "section5Intro": "Gemäß der Datenschutz-Grundverordnung (DSGVO) stehen Ihnen folgende Rechte zu:",
     "rightAccess": "Auskunftsrecht (Art. 15 DSGVO): Sie haben das Recht, Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten zu verlangen.",
