@@ -33,7 +33,8 @@
     "stat3Value": "25+",
     "stat3Label": "Erfolgreiche Projekte",
     "stat4Value": "20",
-    "stat4Label": "Einkaufsberater"
+    "stat4Label": "Einkaufsberater",
+    "callout": "Lassen Sie uns die Zukunft des Einkaufs gemeinsam gestalten."
   },
   "ventures": {
     "title": "Meine Unternehmen.",
@@ -46,7 +47,7 @@
       "stat1": "10-20% zusätzliche Einsparungen",
       "stat2": "90% weniger Handarbeit",
       "stat3": "10x schnellere Umsetzung",
-      "customers": "Vertraut von Phoenix Group, Zalando, Tesa",
+      "customers": "Vertraut von **Phoenix Group, Zalando, Tesa**",
       "linkLabel": "Zu sourcera.ai"
     },
     "vanLaack": {
@@ -57,7 +58,7 @@
       "stat1": "25+ Projekte",
       "stat2": "22 Partner",
       "stat3": "20 Berater",
-      "customers": "Für Schaeffler, Mercedes-Benz, BASF, Siemens Energy, VW",
+      "customers": "Für **Schaeffler, Mercedes-Benz, BASF, Siemens Energy, VW**",
       "linkLabel": "Zu vanlaack-partners.com"
     }
   },
@@ -232,12 +233,6 @@
   "testimonials": {
     "title": "Echte Erfahrungen.\nEchte Ergebnisse.",
     "items": {
-      "testimonial1": {
-        "quote": "Hervorragende Beratung mit tiefem Verständnis für KI-Anwendungen im Einkauf. Die Implementierung war schnell, professionell und genau auf unsere Anforderungen zugeschnitten. Sehr empfehlenswert für Unternehmen, die Effizienz und Innovation im Einkauf vorantreiben wollen.",
-        "name": "Dirk Thiemann",
-        "role": "CPO, Phoenix Pharma Group",
-        "industry": "Pharma-Industrie"
-      },
       "testimonial2": {
         "quote": "Hervorragende Beratung mit einem starken strategischen Verständnis moderner Einkaufsprozesse. Die Strategie wurde schnell und nahtlos umgesetzt und trug wesentlich zur Steigerung der Effizienz und Verbesserung der Entscheidungsfindung bei. Sehr empfehlenswert.",
         "name": "Jeremy Schwarz",

@@ -24,17 +24,10 @@ export default function TestimonialsSection() {
       image: '/images/testimonials/jeremy-schwarz.jpg',
       industry: t('items.testimonial2.industry'),
     },
-    {
-      quote: t('items.testimonial1.quote'),
-      name: t('items.testimonial1.name'),
-      title: t('items.testimonial1.role'),
-      image: '/images/testimonials/dirk-thiemann.jpg',
-      industry: t('items.testimonial1.industry'),
-    },
   ];
 
   return (
-    <section id="testimonials" className="relative py-32 px-6 lg:px-10 bg-background overflow-hidden">
+    <section id="testimonials" className="relative z-[5] py-32 px-6 lg:px-10 bg-background overflow-hidden">
       <div className="relative z-10 mx-auto max-w-[1400px]">
         {/* Giant heading */}
         <motion.h2

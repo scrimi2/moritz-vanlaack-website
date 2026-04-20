@@ -33,7 +33,8 @@
     "stat3Value": "25+",
     "stat3Label": "Successful projects",
     "stat4Value": "20",
-    "stat4Label": "Procurement consultants"
+    "stat4Label": "Procurement consultants",
+    "callout": "Let's shape the future of procurement — together."
   },
   "ventures": {
     "title": "My Ventures.",
@@ -46,7 +47,7 @@
       "stat1": "10-20% Additional Savings",
       "stat2": "90% Less Manual Work",
       "stat3": "10x Faster Execution",
-      "customers": "Trusted by Phoenix Group, Zalando, Tesa",
+      "customers": "Trusted by **Phoenix Group, Zalando, Tesa**",
       "linkLabel": "sourcera.ai"
     },
     "vanLaack": {
@@ -57,7 +58,7 @@
       "stat1": "25+ Projects",
       "stat2": "22 Partners",
       "stat3": "20 Consultants",
-      "customers": "Serving Schaeffler, Mercedes-Benz, BASF, Siemens Energy, VW",
+      "customers": "Serving **Schaeffler, Mercedes-Benz, BASF, Siemens Energy, VW**",
       "linkLabel": "vanlaack-partners.com"
     }
   },
@@ -232,12 +233,6 @@
   "testimonials": {
     "title": "Real Experiences.\nReal Results.",
     "items": {
-      "testimonial1": {
-        "quote": "Excellent consulting with a deep understanding of AI applications in procurement. The implementation was fast, professional, and precisely tailored to our requirements. Highly recommended for companies looking to drive efficiency and innovation in procurement.",
-        "name": "Dirk Thiemann",
-        "role": "CPO, Phoenix Pharma Group",
-        "industry": "Pharma Industry"
-      },
       "testimonial2": {
         "quote": "Excellent consulting with a strong strategic understanding of modern procurement processes. The strategy was implemented quickly and seamlessly, significantly contributing to increased efficiency and improved decision making. Highly recommended.",
         "name": "Jeremy Schwarz",
