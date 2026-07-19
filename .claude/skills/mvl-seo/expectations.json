@@ -1,0 +1,49 @@
+{
+  "baseUrl": "https://moritzvanlaack.com",
+  "redirects": { "/": "/en" },
+  "routes": {
+    "/en": {
+      "lang": "en",
+      "titleContains": "Moritz van Laack",
+      "canonical": "https://moritzvanlaack.com/en",
+      "hreflang": { "en": "/en", "de": "/de" },
+      "jsonld": ["Person", "WebSite", "FAQPage"]
+    },
+    "/de": {
+      "lang": "de",
+      "titleContains": "Moritz van Laack",
+      "canonical": "https://moritzvanlaack.com/de",
+      "hreflang": { "en": "/en", "de": "/de" },
+      "jsonld": ["Person", "WebSite", "FAQPage"]
+    },
+    "/en/impressum": {
+      "lang": "en",
+      "titleContains": "Imprint",
+      "canonical": "https://moritzvanlaack.com/en/impressum",
+      "hreflang": { "en": "/en/impressum", "de": "/de/impressum" }
+    },
+    "/de/impressum": {
+      "lang": "de",
+      "titleContains": "Impressum",
+      "canonical": "https://moritzvanlaack.com/de/impressum",
+      "hreflang": { "en": "/en/impressum", "de": "/de/impressum" }
+    },
+    "/en/datenschutz": {
+      "lang": "en",
+      "titleContains": "Privacy Policy",
+      "canonical": "https://moritzvanlaack.com/en/datenschutz",
+      "hreflang": { "en": "/en/datenschutz", "de": "/de/datenschutz" }
+    },
+    "/de/datenschutz": {
+      "lang": "de",
+      "titleContains": "Datenschutzerklärung",
+      "canonical": "https://moritzvanlaack.com/de/datenschutz",
+      "hreflang": { "en": "/en/datenschutz", "de": "/de/datenschutz" }
+    }
+  },
+  "artifacts": {
+    "sitemap": { "urlCount": 6, "mustNotContain": ["/blog"] },
+    "robots": { "mustContain": ["Sitemap: https://moritzvanlaack.com/sitemap.xml"] },
+    "llmsTxt": { "mustExist": true }
+  }
+}
