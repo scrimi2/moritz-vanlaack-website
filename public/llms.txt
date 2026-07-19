@@ -1,0 +1,20 @@
+# Moritz van Laack
+
+> Moritz van Laack is a procurement expert and entrepreneur based in Cologne, Germany. He is CEO and co-founder of Sourcera (Sourcera GmbH, sourcera.ai) — procurement software that turns existing spend, supplier and contract data into review-ready tender drafts — and founder of van Laack & partners, a procurement consulting firm. 12+ years of experience, EUR 70B+ in optimized spend across pharma, retail, automotive and manufacturing.
+
+The site is bilingual: English at /en (default), German at /de.
+
+## About
+
+- [Profile, experience and ventures (English)](https://moritzvanlaack.com/en): background, career timeline, expertise areas, client logos, testimonials, FAQ, contact
+- [Profil auf Deutsch](https://moritzvanlaack.com/de)
+
+## Ventures
+
+- [Sourcera](https://sourcera.ai): AI tender-draft software for strategic procurement (buyer side); layers on SAP Ariba, Ivalua, JAGGAER, Coupa
+- van Laack & partners: procurement consulting (strategic sourcing, spend analysis, negotiation support)
+
+## Legal
+
+- [Imprint (English)](https://moritzvanlaack.com/en/impressum) · [Impressum (Deutsch)](https://moritzvanlaack.com/de/impressum)
+- [Privacy (English)](https://moritzvanlaack.com/en/datenschutz) · [Datenschutz (Deutsch)](https://moritzvanlaack.com/de/datenschutz)
