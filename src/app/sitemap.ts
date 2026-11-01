@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/constants';
 import { routing } from '@/i18n/routing';
+import { languageAlternates } from '@/lib/seo';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
@@ -16,9 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: page.changeFrequency,
       priority: page.priority,
       alternates: {
-        languages: Object.fromEntries(
-          routing.locales.map((l) => [l, `${SITE_URL}/${l}${page.path}`])
-        ),
+        languages: languageAlternates(page.path),
       },
     }))
   );

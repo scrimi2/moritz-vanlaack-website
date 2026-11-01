@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { languageAlternates } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
 import DatenschutzClient from "./DatenschutzClient";
 
@@ -9,10 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t("title"),
     alternates: {
       canonical: `${SITE_URL}/${locale}/datenschutz`,
-      languages: {
-        en: `${SITE_URL}/en/datenschutz`,
-        de: `${SITE_URL}/de/datenschutz`,
-      },
+      languages: languageAlternates('/datenschutz'),
     },
   };
 }

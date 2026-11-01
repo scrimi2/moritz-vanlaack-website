@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { languageAlternates } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
 import ImpressumClient from "./ImpressumClient";
 
@@ -9,10 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t("title"),
     alternates: {
       canonical: `${SITE_URL}/${locale}/impressum`,
-      languages: {
-        en: `${SITE_URL}/en/impressum`,
-        de: `${SITE_URL}/de/impressum`,
-      },
+      languages: languageAlternates('/impressum'),
     },
   };
 }
