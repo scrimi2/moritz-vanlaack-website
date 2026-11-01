@@ -18,6 +18,8 @@ export default function Datenschutz() {
         </Link>
         <h1 className="text-4xl font-bold mb-8 text-neutral-900">{t("title")}</h1>
 
+        <p className="mb-8 text-neutral-700">{t("lastUpdated")}</p>
+
         <div className="space-y-8 text-neutral-700">
           <section>
             <h2 className="text-xl font-semibold mb-3 text-neutral-900">{t("section1Title")}</h2>
@@ -42,10 +44,19 @@ export default function Datenschutz() {
 
             <h3 className="text-lg font-medium mt-6 mb-2 text-neutral-800">{t("serverLogsTitle")}</h3>
             <p>{t("serverLogsText")}</p>
+
+            <h3 className="text-lg font-medium mt-6 mb-2 text-neutral-800">{t("fontsTitle")}</h3>
+            <p>{t("fontsText")}</p>
+
+            <h3 className="text-lg font-medium mt-6 mb-2 text-neutral-800">{t("emailTitle")}</h3>
+            <p>{t("emailText")}</p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold mb-3 text-neutral-900">{t("section4Title")}</h2>
+            <h3 className="text-lg font-medium mb-2 text-neutral-800">{t("vercelAnalyticsTitle")}</h3>
+            <p>{t("vercelAnalyticsText")}</p>
+            <h3 className="text-lg font-medium mt-6 mb-2 text-neutral-800">Google Analytics 4</h3>
             <p>{t("section4Text")}</p>
           </section>
 

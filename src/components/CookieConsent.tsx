@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
+import { readConsent, writeConsent, subscribeToConsent } from '@/lib/consent';
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
@@ -11,13 +12,22 @@ export default function CookieConsent() {
   const locale = useLocale();
 
   useEffect(() => {
-    const stored = localStorage.getItem('cookie-consent');
-    if (!stored) setVisible(true);
+    const frame = requestAnimationFrame(() => {
+      setVisible(readConsent() === null);
+    });
+
+    const unsubscribe = subscribeToConsent((consent) => setVisible(consent === null));
+    const open = () => setVisible(true);
+    window.addEventListener('cookie-consent-open', open);
+    return () => {
+      cancelAnimationFrame(frame);
+      unsubscribe();
+      window.removeEventListener('cookie-consent-open', open);
+    };
   }, []);
 
   const respond = (value: 'granted' | 'denied') => {
-    localStorage.setItem('cookie-consent', value);
-    window.dispatchEvent(new Event('cookie-consent-update'));
+    writeConsent(value);
     setVisible(false);
   };
 
@@ -41,10 +51,10 @@ export default function CookieConsent() {
                 {t('learnMore')}
               </a>
             </p>
-            <div className="mt-3 flex items-center gap-3">
+            <div className="mt-3 grid grid-cols-2 gap-3">
               <button
                 onClick={() => respond('granted')}
-                className="rounded-full bg-black text-white dark:bg-white dark:text-black px-5 py-2 text-sm font-medium transition-opacity hover:opacity-80"
+                className="rounded-full border border-black/20 dark:border-white/20 px-5 py-2 text-sm font-medium text-black/70 dark:text-white/70 transition-colors hover:text-black dark:hover:text-white hover:border-black/40 dark:hover:border-white/40"
               >
                 {t('accept')}
               </button>
