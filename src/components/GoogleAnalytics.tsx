@@ -3,26 +3,18 @@
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+import { GA_ID, readConsent, subscribeToConsent, type Consent } from '@/lib/consent';
 
 export default function GoogleAnalytics() {
-  const [consent, setConsent] = useState<string | null>(null);
+  const [consent, setConsent] = useState<Consent>(null);
 
   useEffect(() => {
-    setConsent(localStorage.getItem('cookie-consent'));
-
-    const onStorage = (e: StorageEvent) => {
-      if (e.key === 'cookie-consent') setConsent(e.newValue);
+    const unsubscribe = subscribeToConsent(setConsent);
+    const frame = requestAnimationFrame(() => setConsent(readConsent()));
+    return () => {
+      cancelAnimationFrame(frame);
+      unsubscribe();
     };
-    window.addEventListener('storage', onStorage);
-    return () => window.removeEventListener('storage', onStorage);
-  }, []);
-
-  // Also listen for custom event from CookieConsent component (same tab)
-  useEffect(() => {
-    const onConsent = () => setConsent(localStorage.getItem('cookie-consent'));
-    window.addEventListener('cookie-consent-update', onConsent);
-    return () => window.removeEventListener('cookie-consent-update', onConsent);
   }, []);
 
   if (!GA_ID || consent !== 'granted') return null;

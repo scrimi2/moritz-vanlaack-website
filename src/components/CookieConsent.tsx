@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
+import { readConsent, writeConsent, subscribeToConsent } from '@/lib/consent';
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
@@ -12,36 +13,21 @@ export default function CookieConsent() {
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
-      if (!localStorage.getItem('cookie-consent')) setVisible(true);
+      setVisible(readConsent() === null);
     });
 
+    const unsubscribe = subscribeToConsent((consent) => setVisible(consent === null));
     const open = () => setVisible(true);
     window.addEventListener('cookie-consent-open', open);
     return () => {
       cancelAnimationFrame(frame);
+      unsubscribe();
       window.removeEventListener('cookie-consent-open', open);
     };
   }, []);
 
   const respond = (value: 'granted' | 'denied') => {
-    const previous = localStorage.getItem('cookie-consent');
-    localStorage.setItem('cookie-consent', value);
-
-    if (previous === 'granted' && value === 'denied') {
-      const domains = ['', `; domain=${window.location.hostname}`, '; domain=.moritzvanlaack.com'];
-      for (const cookie of document.cookie.split(';')) {
-        const name = cookie.trim().split('=')[0];
-        if (name === '_ga' || name.startsWith('_ga_')) {
-          for (const domain of domains) {
-            document.cookie = `${name}=; Max-Age=0; path=/${domain}`;
-          }
-        }
-      }
-      window.location.reload();
-      return;
-    }
-
-    window.dispatchEvent(new Event('cookie-consent-update'));
+    writeConsent(value);
     setVisible(false);
   };
 
