@@ -11,12 +11,36 @@ export default function CookieConsent() {
   const locale = useLocale();
 
   useEffect(() => {
-    const stored = localStorage.getItem('cookie-consent');
-    if (!stored) setVisible(true);
+    const frame = requestAnimationFrame(() => {
+      if (!localStorage.getItem('cookie-consent')) setVisible(true);
+    });
+
+    const open = () => setVisible(true);
+    window.addEventListener('cookie-consent-open', open);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('cookie-consent-open', open);
+    };
   }, []);
 
   const respond = (value: 'granted' | 'denied') => {
+    const previous = localStorage.getItem('cookie-consent');
     localStorage.setItem('cookie-consent', value);
+
+    if (previous === 'granted' && value === 'denied') {
+      const domains = ['', `; domain=${window.location.hostname}`, '; domain=.moritzvanlaack.com'];
+      for (const cookie of document.cookie.split(';')) {
+        const name = cookie.trim().split('=')[0];
+        if (name === '_ga' || name.startsWith('_ga_')) {
+          for (const domain of domains) {
+            document.cookie = `${name}=; Max-Age=0; path=/${domain}`;
+          }
+        }
+      }
+      window.location.reload();
+      return;
+    }
+
     window.dispatchEvent(new Event('cookie-consent-update'));
     setVisible(false);
   };
@@ -41,10 +65,10 @@ export default function CookieConsent() {
                 {t('learnMore')}
               </a>
             </p>
-            <div className="mt-3 flex items-center gap-3">
+            <div className="mt-3 grid grid-cols-2 gap-3">
               <button
                 onClick={() => respond('granted')}
-                className="rounded-full bg-black text-white dark:bg-white dark:text-black px-5 py-2 text-sm font-medium transition-opacity hover:opacity-80"
+                className="rounded-full border border-black/20 dark:border-white/20 px-5 py-2 text-sm font-medium text-black/70 dark:text-white/70 transition-colors hover:text-black dark:hover:text-white hover:border-black/40 dark:hover:border-white/40"
               >
                 {t('accept')}
               </button>

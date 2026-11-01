@@ -55,13 +55,20 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-400">
           <p>{t('copyright')}</p>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap justify-center items-center gap-6">
             <a href={`/${locale}/impressum`} className="transition-colors hover:text-neutral-900">
               {t('impressum')}
             </a>
             <a href={`/${locale}/datenschutz`} className="transition-colors hover:text-neutral-900">
               {t('datenschutz')}
             </a>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new Event('cookie-consent-open'))}
+              className="transition-colors hover:text-neutral-900"
+            >
+              {t('cookieSettings')}
+            </button>
           </div>
         </div>
       </div>
