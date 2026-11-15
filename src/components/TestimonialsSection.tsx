@@ -101,6 +101,8 @@ export default function TestimonialsSection() {
             <button
               key={i}
               onClick={() => setActiveTab(i)}
+              aria-label={`Show testimonial from ${item.name}`}
+              aria-current={i === activeTab}
               className={`h-[3px] rounded-full transition-all duration-300 ${
                 i === activeTab ? 'w-10 bg-neutral-900' : 'w-5 bg-neutral-300 hover:bg-neutral-400'
               }`}
