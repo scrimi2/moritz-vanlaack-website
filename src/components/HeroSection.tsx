@@ -53,6 +53,8 @@ export default function HeroSection() {
           <button
             key={i}
             onClick={() => setCurrentIndex(i)}
+            aria-label={`Show headline ${i + 1} of ${headlines.length}`}
+            aria-current={i === currentIndex}
             className={`h-[3px] rounded-full transition-all duration-300 ${
               i === currentIndex ? 'w-10 bg-white' : 'w-5 bg-white/30'
             }`}

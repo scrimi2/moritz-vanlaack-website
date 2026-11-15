@@ -39,6 +39,7 @@ export default function CookieConsent() {
                 className="underline underline-offset-2 hover:text-black dark:hover:text-white transition-colors"
               >
                 {t('learnMore')}
+                <span className="sr-only"> {locale === 'de' ? 'über Datenschutz' : 'about privacy'}</span>
               </a>
             </p>
             <div className="mt-3 flex items-center gap-3">
