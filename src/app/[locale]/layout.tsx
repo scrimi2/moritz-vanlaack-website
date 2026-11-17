@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -56,6 +57,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     notFound();
   }
 
+  const nonce = (await headers()).get("x-nonce") ?? undefined;
   const messages = await getMessages();
 
   return (
@@ -65,11 +67,11 @@ export default async function LocaleLayout({ children, params }: Props) {
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
-        <ThemeProvider>
+        <ThemeProvider nonce={nonce}>
           <NextIntlClientProvider messages={messages}>
             {children}
             <CookieConsent />
-            <GoogleAnalytics />
+            <GoogleAnalytics nonce={nonce} />
           </NextIntlClientProvider>
         </ThemeProvider>
         <Analytics />

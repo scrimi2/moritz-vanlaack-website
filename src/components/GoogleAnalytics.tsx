@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
-export default function GoogleAnalytics() {
+export default function GoogleAnalytics({ nonce }: { nonce?: string }) {
   const [consent, setConsent] = useState<string | null>(null);
 
   useEffect(() => {
@@ -30,10 +30,11 @@ export default function GoogleAnalytics() {
   return (
     <>
       <Script
+        nonce={nonce}
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
         strategy="afterInteractive"
       />
-      <Script id="ga4-init" strategy="afterInteractive">
+      <Script nonce={nonce} id="ga4-init" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
