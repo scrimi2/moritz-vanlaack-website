@@ -1,7 +1,9 @@
+import { headers } from "next/headers";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from '@/lib/constants';
 import { getLocale, getTranslations } from 'next-intl/server';
 
 export default async function JsonLd() {
+  const nonce = (await headers()).get("x-nonce") ?? undefined;
   const locale = await getLocale();
   const t = await getTranslations('faq');
 
@@ -84,14 +86,17 @@ export default async function JsonLd() {
   return (
     <>
       <script
+        nonce={nonce}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
       <script
+        nonce={nonce}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
       <script
+        nonce={nonce}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />

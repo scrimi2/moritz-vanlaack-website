@@ -1,0 +1,89 @@
+{
+  "base": "http://localhost:3102",
+  "pages": [
+    {
+      "path": "/en",
+      "finalPath": "/en",
+      "status": 200
+    },
+    {
+      "path": "/de",
+      "finalPath": "/de",
+      "status": 200
+    },
+    {
+      "path": "/en/impressum",
+      "finalPath": "/en/impressum",
+      "status": 200
+    },
+    {
+      "path": "/de/impressum",
+      "finalPath": "/de/impressum",
+      "status": 200
+    },
+    {
+      "path": "/en/datenschutz",
+      "finalPath": "/en/datenschutz",
+      "status": 200
+    },
+    {
+      "path": "/de/datenschutz",
+      "finalPath": "/de/datenschutz",
+      "status": 200
+    },
+    {
+      "path": "/en/logo-preview",
+      "finalPath": "/en/logo-preview",
+      "status": 200
+    },
+    {
+      "path": "/en/blog",
+      "finalPath": "/en",
+      "status": 200
+    },
+    {
+      "path": "/en/blog/csp-check",
+      "finalPath": "/en",
+      "status": 200
+    },
+    {
+      "path": "/de/logo-preview",
+      "finalPath": "/de/logo-preview",
+      "status": 200
+    },
+    {
+      "path": "/de/blog",
+      "finalPath": "/de",
+      "status": 200
+    },
+    {
+      "path": "/de/blog/csp-check",
+      "finalPath": "/de",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "finalPath": "/en",
+      "status": 200
+    }
+  ],
+  "violations": [],
+  "consoleErrors": [],
+  "googleRequests": [
+    "https://www.googletagmanager.com/gtag/js",
+    "https://region1.google-analytics.com/g/collect",
+    "https://www.googletagmanager.com/gtag/js"
+  ],
+  "failedResponses": [],
+  "consent": {
+    "before": 0,
+    "declined": 0,
+    "accepted": 2,
+    "dataLayer": [
+      "js",
+      "config"
+    ],
+    "persisted": 3
+  },
+  "localVercelStubs": true
+}
